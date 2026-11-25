@@ -1,0 +1,11 @@
+__pycache__/
+.venv/
+data/raw/
+
+# Derived panels; `riskcheck build` regenerates them from data/raw.
+data/processed/
+
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
