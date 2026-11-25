@@ -330,6 +330,35 @@ def block_bootstrap_ci(
     return float(np.quantile(means, alpha / 2)), float(np.quantile(means, 1 - alpha / 2))
 
 
+def paired_log_score_difference(
+    series: np.ndarray,
+    baseline: np.ndarray,
+    block: int = config.BOOTSTRAP_BLOCK,
+    draws: int = config.BOOTSTRAP_DRAWS,
+    seed: int = config.BOOTSTRAP_SEED,
+    alpha: float = 0.05,
+) -> dict:
+    """Block-bootstrap the *difference* in log score against a baseline model.
+
+    Comparing two models by whether their separate confidence intervals
+    overlap is the wrong test, and badly so here: every estimator is scored on
+    the same realised returns, so most of the sampling variation in the level
+    is a common shock that cancels in the difference. On this data the interval
+    around each model's own log score is about 0.45 wide while the interval
+    around the difference between two models is an order of magnitude tighter.
+
+    Positive means worse than the baseline, since the score is a loss.
+    """
+    difference = series - baseline
+    low, high = block_bootstrap_ci(difference, block=block, draws=draws, seed=seed, alpha=alpha)
+    return {
+        "difference": float(difference.mean()),
+        "difference_lo": low,
+        "difference_hi": high,
+        "worse_than_baseline": bool(low > 0.0),
+    }
+
+
 # ---------------------------------------------------------------------------
 # Minimum-variance diagnostics
 # ---------------------------------------------------------------------------
@@ -401,6 +430,9 @@ class SpecResult:
     log_score_mean: float
     log_score_ci: tuple[float, float]
     stress: dict[str, dict] = field(default_factory=dict)
+    #: Per-observation scores, kept so the runner can bootstrap *paired*
+    #: differences between estimators. Never written to JSON.
+    log_score_series: np.ndarray | None = field(default=None, repr=False)
 
     def to_row(self) -> dict:
         row: dict[str, Any] = {
@@ -508,11 +540,13 @@ def evaluate_bundle(
         log_score_mean=float(scores.mean()),
         log_score_ci=(low, high),
         stress=stress,
+        log_score_series=scores,
     )
 
 
 def result_to_json(result: SpecResult) -> dict:
     blob = asdict(result)
+    blob.pop("log_score_series", None)
     # The rolling curves are written to their own file; keep the JSON readable.
     for summary in blob["bias"].values():
         summary.pop("rolling_dates", None)

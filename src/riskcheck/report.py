@@ -198,6 +198,44 @@ def stress_table(
     return _markdown_table(headers, rows)
 
 
+def log_score_table(paired: pd.DataFrame, horizon: str = HEADLINE_HORIZON) -> str:
+    """Log score, and the paired difference against the best model.
+
+    The level's own interval is wide and overlaps for every estimator, because
+    it is dominated by variation in the realised returns that all of them
+    share. The paired difference is the comparison that carries information.
+    """
+    frame = paired[paired.horizon == horizon]
+    headers = [
+        "Estimator",
+        "Asset set",
+        "Log score",
+        "Own 95% interval",
+        "vs. best",
+        "Paired 95% interval",
+        "Worse than best?",
+    ]
+    rows = []
+    for asset_set in config.MAIN_ASSET_SETS:
+        block = frame[frame.asset_set == asset_set]
+        if block.empty:
+            continue
+        for name in _estimator_order(block):
+            row = block[block.estimator == name].iloc[0]
+            rows.append(
+                [
+                    name,
+                    asset_set,
+                    _fmt(row.log_score, 3),
+                    f"[{_fmt(row.log_score_lo, 2)}, {_fmt(row.log_score_hi, 2)}]",
+                    _fmt(row.difference, 4),
+                    f"[{_fmt(row.difference_lo, 4)}, {_fmt(row.difference_hi, 4)}]",
+                    "yes" if row.worse_than_baseline else "no",
+                ]
+            )
+    return _markdown_table(headers, rows)
+
+
 def hyperparameter_table(blob: dict) -> str:
     """What was chosen on the validation span, and what it beat."""
     headers = ["Family", "Chosen on validation", "Grid searched", "Validation log score"]
@@ -253,6 +291,10 @@ def render_report(results_dir: Path) -> str:
         "## Random portfolios",
         "",
         random_portfolio_table(metrics),
+        "",
+        "## Log score, levels and paired differences",
+        "",
+        log_score_table(pd.read_csv(results_dir / "log_score_paired.csv")),
         "",
         "## Stress windows (minimum-variance bias statistic, daily horizon)",
         "",

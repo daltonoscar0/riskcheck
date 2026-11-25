@@ -35,6 +35,41 @@ class TestRun:
         return pd.DataFrame([r.to_row() for r in self.results])
 
     @property
+    def paired_log_score_table(self) -> pd.DataFrame:
+        """Log-score differences against the best model, with paired intervals.
+
+        Every estimator is scored on the same realised returns, so the level of
+        the log score moves together across models and its own interval says
+        little about which model is better. Differencing against a common
+        baseline removes that shared variation.
+        """
+        rows = []
+        groups: dict[tuple[str, str], list[evaluate.SpecResult]] = {}
+        for result in self.results:
+            if result.log_score_series is not None:
+                groups.setdefault((result.asset_set, result.horizon), []).append(result)
+
+        for (asset_set, horizon), members in groups.items():
+            best = min(members, key=lambda r: r.log_score_mean)
+            for result in members:
+                comparison = evaluate.paired_log_score_difference(
+                    result.log_score_series, best.log_score_series
+                )
+                rows.append(
+                    {
+                        "asset_set": asset_set,
+                        "horizon": horizon,
+                        "estimator": result.short_label,
+                        "baseline": best.short_label,
+                        "log_score": result.log_score_mean,
+                        "log_score_lo": result.log_score_ci[0],
+                        "log_score_hi": result.log_score_ci[1],
+                        **comparison,
+                    }
+                )
+        return pd.DataFrame(rows)
+
+    @property
     def stress_table(self) -> pd.DataFrame:
         rows = []
         for result in self.results:
@@ -181,6 +216,7 @@ def write_results(run: TestRun, results_dir: Path, raw_dir: Path | None = None) 
     run.table.to_csv(results_dir / "metrics.csv", index=False)
     run.stress_table.to_csv(results_dir / "stress.csv", index=False)
     run.rolling.to_csv(results_dir / "rolling_bias.csv", index=False)
+    run.paired_log_score_table.to_csv(results_dir / "log_score_paired.csv", index=False)
 
     detail = [evaluate.result_to_json(r) for r in run.results]
     (results_dir / "metrics.json").write_text(json.dumps(detail, indent=2) + "\n")

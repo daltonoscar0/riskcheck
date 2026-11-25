@@ -118,6 +118,33 @@ def test_minimum_variance_bias_matches_the_vol_ratio(toy_run):
     np.testing.assert_allclose(table.mv_bias_mean, ratio, rtol=0.15)
 
 
+def test_paired_log_score_differences_are_tighter_than_the_levels(toy_run):
+    """The whole point of pairing: shared shocks cancel.
+
+    Each model's own log-score interval is dominated by variation in the
+    realised returns, which every model sees. Differencing against a common
+    baseline removes it, so the interval on the difference must be
+    substantially narrower than the interval on the level.
+    """
+    paired = toy_run.paired_log_score_table
+    assert not paired.empty
+
+    level_width = (paired.log_score_hi - paired.log_score_lo).mean()
+    difference_width = (paired.difference_hi - paired.difference_lo).mean()
+    assert difference_width < level_width
+
+    # The baseline compares to itself with a difference of exactly zero.
+    baseline_rows = paired[paired.estimator == paired.baseline]
+    assert (baseline_rows.difference == 0).all()
+    assert not baseline_rows.worse_than_baseline.any()
+
+
+def test_paired_differences_are_non_negative_against_the_best_model(toy_run):
+    """The baseline is the lowest-loss model, so no difference can be negative."""
+    paired = toy_run.paired_log_score_table
+    assert (paired.difference >= -1e-12).all()
+
+
 def test_stress_windows_are_reported_with_their_observation_counts(toy_run):
     stress = toy_run.stress_table
     assert not stress.empty
@@ -143,6 +170,7 @@ def test_write_results_saves_every_artefact(toy_run, tmp_path):
         "rolling_bias.csv",
         "metrics.json",
         "run_metadata.json",
+        "log_score_paired.csv",
     )
     for name in expected:
         assert (tmp_path / name).exists(), name
