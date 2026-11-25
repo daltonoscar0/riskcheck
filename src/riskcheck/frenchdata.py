@@ -154,7 +154,10 @@ def section_to_panel(section: Section) -> Panel:
         )
 
     dates = np.asarray(
-        [np.datetime64(f"{d // 10000:04d}-{d // 100 % 100:02d}-{d % 100:02d}") for d in section.dates],
+        [
+            np.datetime64(f"{d // 10000:04d}-{d // 100 % 100:02d}-{d % 100:02d}")
+            for d in section.dates
+        ],
         dtype="datetime64[D]",
     )
     return Panel(

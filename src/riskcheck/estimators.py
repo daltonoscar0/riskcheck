@@ -33,7 +33,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from functools import partial
-from typing import Any
+from typing import Any, NamedTuple
 
 import jax
 import jax.numpy as jnp
@@ -51,7 +51,11 @@ def halflife_to_lambda(halflife_days: float) -> float:
     return float(2.0 ** (-1.0 / halflife_days))
 
 
-def rebalance_indices(n_dates: int, burn_in: int = config.BURN_IN, stride: int = config.REBALANCE_STRIDE) -> np.ndarray:
+def rebalance_indices(
+    n_dates: int,
+    burn_in: int = config.BURN_IN,
+    stride: int = config.REBALANCE_STRIDE,
+) -> np.ndarray:
     """Row indices at which forecasts are made.
 
     The first is ``burn_in - 1`` so that the longest window an estimator may
@@ -219,7 +223,8 @@ def ledoit_wolf_covariance(
         correlation = sample / outer_scale
         n = sample.shape[0]
         off_diagonal_count = n * (n - 1)
-        mean_correlation = (jnp.sum(correlation) - jnp.sum(jnp.diag(correlation))) / off_diagonal_count
+        off_diagonal_sum = jnp.sum(correlation) - jnp.sum(jnp.diag(correlation))
+        mean_correlation = off_diagonal_sum / off_diagonal_count
 
         target = mean_correlation * outer_scale
         target = target - jnp.diag(jnp.diag(target)) + jnp.diag(variances)
@@ -274,16 +279,22 @@ def pca_covariance(
     return _map_over_dates(per_date, (returns,), t_idx)
 
 
-def pca_covariance_multi_k(
-    returns: jnp.ndarray, t_idx: np.ndarray, window: int, factor_counts: tuple[int, ...]
-) -> dict[int, jnp.ndarray]:
-    """``pca_covariance`` for several ``k`` at once, sharing the eigendecomposition.
+class PCADecomposition(NamedTuple):
+    """Eigendecomposition of the rolling sample matrix, shared across ``k``.
 
-    The batched ``eigh`` is by far the most expensive thing riskcheck does, and
-    it does not depend on ``k``. Doing it once per window instead of once per
-    (window, k) pair is what keeps the validation sweep to seconds.
+    The batched ``eigh`` is by far the most expensive thing riskcheck does and
+    it does not depend on ``k``, so the validation sweep decomposes once per
+    window and assembles each ``k`` from the result.
     """
 
+    eigenvalues: jnp.ndarray  # (D, N) ascending
+    eigenvectors: jnp.ndarray  # (D, N, N)
+    variances: jnp.ndarray  # (D, N) diagonal of the sample matrix
+
+
+def pca_eigendecomposition(
+    returns: jnp.ndarray, t_idx: np.ndarray, window: int
+) -> PCADecomposition:
     def per_date(data, t):
         block = _window(data, t, window)
         sample = block.T @ block / window
@@ -292,27 +303,25 @@ def pca_covariance_multi_k(
 
     mapped = jax.jit(jax.vmap(per_date, in_axes=(None, 0)))
     chunk = 256
-    values, vectors, variances = (
-        jnp.concatenate(parts, axis=0)
-        for parts in zip(
-            *(
-                mapped(returns, jnp.asarray(t_idx[lo : lo + chunk]))
-                for lo in range(0, len(t_idx), chunk)
-            ),
-            strict=True,
-        )
+    parts = [
+        mapped(returns, jnp.asarray(t_idx[lo : lo + chunk]))
+        for lo in range(0, len(t_idx), chunk)
+    ]
+    return PCADecomposition(
+        *(jnp.concatenate(piece, axis=0) for piece in zip(*parts, strict=True))
     )
 
-    @partial(jax.jit, static_argnames=("k",))
-    def assemble(values, vectors, variances, k: int):
-        loadings = vectors[:, :, -k:] * jnp.sqrt(values[:, None, -k:])
-        common = loadings @ jnp.swapaxes(loadings, 1, 2)
-        common_variance = jnp.diagonal(common, axis1=1, axis2=2)
-        floor = config.SPECIFIC_VARIANCE_FLOOR * jnp.mean(variances, axis=1, keepdims=True)
-        specific = jnp.maximum(variances - common_variance, floor)
-        return _symmetrise(common + jax.vmap(jnp.diag)(specific))
 
-    return {k: assemble(values, vectors, variances, k) for k in factor_counts}
+@partial(jax.jit, static_argnames=("n_factors",))
+def pca_assemble(decomposition: PCADecomposition, n_factors: int) -> jnp.ndarray:
+    """Build the ``k``-factor covariance stack from a shared decomposition."""
+    values, vectors, variances = decomposition
+    loadings = vectors[:, :, -n_factors:] * jnp.sqrt(values[:, None, -n_factors:])
+    common = loadings @ jnp.swapaxes(loadings, 1, 2)
+    common_variance = jnp.diagonal(common, axis1=1, axis2=2)
+    floor = config.SPECIFIC_VARIANCE_FLOOR * jnp.mean(variances, axis=1, keepdims=True)
+    specific = jnp.maximum(variances - common_variance, floor)
+    return _symmetrise(common + jax.vmap(jnp.diag)(specific))
 
 
 def fundamental_covariance(
@@ -470,7 +479,10 @@ class Spec:
             case "pca":
                 return f"PCA factor (k={p['n_factors']}, {p['window'] // 252}y)"
             case "fundamental":
-                return f"FF5+Mom factor ({p['window'] // 252}y, factor HL {p['factor_halflife']:g}d)"
+                return (
+                    f"FF5+Mom factor ({p['window'] // 252}y, "
+                    f"factor HL {p['factor_halflife']:g}d)"
+                )
             case "vra":
                 assert self.base is not None
                 return f"{self.base.label} + regime adj. (HL {p['halflife']:g}d)"
@@ -545,3 +557,22 @@ def forecast(
             )
             return base * multiplier[:, None, None]
     raise ValueError(f"unknown family {spec.family}")
+
+
+def forecasts_for_specs(
+    specs: list[Spec], returns: jnp.ndarray, factors: jnp.ndarray, t_idx: np.ndarray
+):
+    """Yield ``(spec, covariances)`` for many specs, sharing the PCA eigh work.
+
+    One covariance stack is alive at a time, so sweeping thirty configurations
+    costs the memory of one rather than thirty.
+    """
+    decompositions: dict[int, PCADecomposition] = {}
+    for spec in specs:
+        if spec.family == "pca":
+            window = int(spec.params["window"])
+            if window not in decompositions:
+                decompositions[window] = pca_eigendecomposition(returns, t_idx, window)
+            yield spec, pca_assemble(decompositions[window], int(spec.params["n_factors"]))
+        else:
+            yield spec, forecast(spec, returns, factors, t_idx)

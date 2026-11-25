@@ -1,0 +1,3458 @@
+[
+  {
+    "spec_key": "sample_window756",
+    "spec_label": "Sample (3y window)",
+    "short_label": "Sample",
+    "asset_set": "industry49",
+    "horizon": "1d",
+    "n_obs": 6723,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 6723,
+        "n_portfolios": 2000,
+        "mean": 1.0693159093079254,
+        "median": 1.0691804212463636,
+        "p05": 1.063350622115319,
+        "p95": 1.075788319674752,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.29587395083932855,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 6723,
+        "n_portfolios": 2000,
+        "mean": 1.0427749915499493,
+        "median": 1.0419537822336449,
+        "p05": 1.021966822085612,
+        "p95": 1.0662432228856809,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.4766899730215827,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.12230015442235405,
+      "forecast_vol_annual": 0.1005477546695468,
+      "gross_leverage": 3.3832105342427976,
+      "bias": {
+        "n_obs": 6723,
+        "n_portfolios": 1,
+        "mean": 1.2382047383847186,
+        "median": 1.2382047383847186,
+        "p05": 1.2382047383847186,
+        "p95": 1.2382047383847186,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.5442146282973621,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -8.404982397599406,
+    "log_score_ci": [
+      -8.552920855627494,
+      -8.268316037218927
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 505,
+        "band": 0.06293167755275526,
+        "mv_bias": 1.8369049373280553,
+        "mv_realized_vol_annual": 0.17836486059714513,
+        "mv_forecast_vol_annual": 0.10371436340034393,
+        "log_score": -7.349331132758425,
+        "long_only_bias": 1.721109675294469,
+        "long_short_bias": 1.4910337456084284
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 22,
+        "band": 0.30151134457776363,
+        "mv_bias": 6.788200594938568,
+        "mv_realized_vol_annual": 0.675725200537983,
+        "mv_forecast_vol_annual": 0.10400863107986892,
+        "log_score": 1.4350463208999953,
+        "long_only_bias": 5.962909447721568,
+        "long_short_bias": 3.108270192069395
+      },
+      "COVID crash (wide)": {
+        "n_obs": 52,
+        "band": 0.19611613513818404,
+        "mv_bias": 4.921581951209409,
+        "mv_realized_vol_annual": 0.4877850464023728,
+        "mv_forecast_vol_annual": 0.10777700737180064,
+        "log_score": -3.1042638894479895,
+        "long_only_bias": 4.250594827948581,
+        "long_short_bias": 2.4447721944195004
+      },
+      "2022 drawdown": {
+        "n_obs": 251,
+        "band": 0.08926436853549036,
+        "mv_bias": 1.1486521380960377,
+        "mv_realized_vol_annual": 0.1532900776836089,
+        "mv_forecast_vol_annual": 0.13362317360121212,
+        "log_score": -8.157420844387817,
+        "long_only_bias": 0.9405180558204488,
+        "long_short_bias": 1.0399231689869448
+      }
+    }
+  },
+  {
+    "spec_key": "sample_window756",
+    "spec_label": "Sample (3y window)",
+    "short_label": "Sample",
+    "asset_set": "industry49",
+    "horizon": "1w",
+    "n_obs": 1345,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 0.9958883179173438,
+        "median": 0.9958952658736437,
+        "p05": 0.9778364705604723,
+        "p95": 1.0131644121627035,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.43725270479134465,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.0334140242763095,
+        "median": 1.0324999140665814,
+        "p05": 0.9830018053688907,
+        "p95": 1.0867783556959563,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.5366460587326121,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.11708502434999878,
+      "forecast_vol_annual": 0.10054416232196775,
+      "gross_leverage": 3.3832105342427976,
+      "bias": {
+        "n_obs": 1345,
+        "n_portfolios": 1,
+        "mean": 1.1900877381704251,
+        "median": 1.1900877381704251,
+        "p05": 1.1900877381704251,
+        "p95": 1.1900877381704251,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.642967542503864,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -6.827374448755087,
+    "log_score_ci": [
+      -7.07701376340691,
+      -6.622748169900361
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 101,
+        "band": 0.14071950894605836,
+        "mv_bias": 1.8675261661830072,
+        "mv_realized_vol_annual": 0.1802038461269875,
+        "mv_forecast_vol_annual": 0.10347509097100184,
+        "log_score": -5.853088995411837,
+        "long_only_bias": 1.5457114881496303,
+        "long_short_bias": 1.4080393141376386
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 5,
+        "band": 0.6324555320336759,
+        "mv_bias": 3.433548899362491,
+        "mv_realized_vol_annual": 0.18315688970559046,
+        "mv_forecast_vol_annual": 0.10144907269987671,
+        "log_score": 2.8311011865549256,
+        "long_only_bias": 3.775167010656028,
+        "long_short_bias": 3.0149607821363618
+      },
+      "COVID crash (wide)": {
+        "n_obs": 11,
+        "band": 0.4264014327112209,
+        "mv_bias": 3.1214411400541247,
+        "mv_realized_vol_annual": 0.32760581930895283,
+        "mv_forecast_vol_annual": 0.10545658574555573,
+        "log_score": -1.8210842242824647,
+        "long_only_bias": 2.9653281979561075,
+        "long_short_bias": 2.368247335811986
+      },
+      "2022 drawdown": {
+        "n_obs": 50,
+        "band": 0.2,
+        "mv_bias": 1.1336098659918314,
+        "mv_realized_vol_annual": 0.15126802138180542,
+        "mv_forecast_vol_annual": 0.13344355173046774,
+        "log_score": -6.552421467558584,
+        "long_only_bias": 0.8737966288672767,
+        "long_short_bias": 1.0275371646568718
+      }
+    }
+  },
+  {
+    "spec_key": "sample_window756",
+    "spec_label": "Sample (3y window)",
+    "short_label": "Sample",
+    "asset_set": "industry49",
+    "horizon": "1m",
+    "n_obs": 336,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 0.9778753051455397,
+        "median": 0.9775980806941704,
+        "p05": 0.9491361764795265,
+        "p95": 1.0071177941205145,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.24856315789473685,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.0014466043600514,
+        "median": 0.9993698867149379,
+        "p05": 0.9265891299407643,
+        "p95": 1.0832996365573329,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.7098035087719298,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.12473854491943416,
+      "forecast_vol_annual": 0.10055767154094207,
+      "gross_leverage": 3.3832105342427976,
+      "bias": {
+        "n_obs": 336,
+        "n_portfolios": 1,
+        "mean": 1.3109679565951033,
+        "median": 1.3109679565951033,
+        "p05": 1.3109679565951033,
+        "p95": 1.3109679565951033,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.45614035087719296,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -5.462799398155948,
+    "log_score_ci": [
+      -5.8680383284712745,
+      -5.288874585924047
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 25,
+        "band": 0.282842712474619,
+        "mv_bias": 1.9868082318601903,
+        "mv_realized_vol_annual": 0.18938689351093246,
+        "mv_forecast_vol_annual": 0.10230577436724546,
+        "log_score": -4.454917456370429,
+        "long_only_bias": 1.6332825568555653,
+        "long_short_bias": 1.3003984361309704
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 1,
+        "band": 1.4142135623730951,
+        "mv_bias": 10.318641344117687,
+        "mv_realized_vol_annual": NaN,
+        "mv_forecast_vol_annual": 0.08267897791326702,
+        "log_score": 6.1765849690581875,
+        "long_only_bias": 7.433467764886155,
+        "long_short_bias": 2.372323078417216
+      },
+      "COVID crash (wide)": {
+        "n_obs": 3,
+        "band": 0.816496580927726,
+        "mv_bias": 6.4237600670177635,
+        "mv_realized_vol_annual": 0.680473392403541,
+        "mv_forecast_vol_annual": 0.09386783325858793,
+        "log_score": -0.9319339917058326,
+        "long_only_bias": 4.565926706653774,
+        "long_short_bias": 1.7878499858695422
+      },
+      "2022 drawdown": {
+        "n_obs": 12,
+        "band": 0.408248290463863,
+        "mv_bias": 1.3778785953873016,
+        "mv_realized_vol_annual": 0.1893687681436102,
+        "mv_forecast_vol_annual": 0.1326678120163189,
+        "log_score": -4.960132116560477,
+        "long_only_bias": 0.783743900309833,
+        "long_short_bias": 1.077331938928734
+      }
+    }
+  },
+  {
+    "spec_key": "ewma_halflife252.0",
+    "spec_label": "EWMA (half-life 252d)",
+    "short_label": "EWMA",
+    "asset_set": "industry49",
+    "horizon": "1d",
+    "n_obs": 6723,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 6723,
+        "n_portfolios": 2000,
+        "mean": 1.0164262282222025,
+        "median": 1.0163507728625876,
+        "p05": 1.0113621978843443,
+        "p95": 1.0214249586853936,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.2743122002398082,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 6723,
+        "n_portfolios": 2000,
+        "mean": 1.0061087662129626,
+        "median": 1.0057168288587937,
+        "p05": 0.9920558172701227,
+        "p95": 1.0209504519612242,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.5155183603117506,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.11824849809822563,
+      "forecast_vol_annual": 0.10296944750363525,
+      "gross_leverage": 3.3511968969121253,
+      "bias": {
+        "n_obs": 6723,
+        "n_portfolios": 1,
+        "mean": 1.140388603623503,
+        "median": 1.140388603623503,
+        "p05": 1.140388603623503,
+        "p95": 1.140388603623503,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.5666966426858513,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -8.47679119193049,
+    "log_score_ci": [
+      -8.611378833945285,
+      -8.355145258163667
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 505,
+        "band": 0.06293167755275526,
+        "mv_bias": 1.6133512297203756,
+        "mv_realized_vol_annual": 0.17762233175086,
+        "mv_forecast_vol_annual": 0.11543067276894685,
+        "log_score": -7.6107751396567185,
+        "long_only_bias": 1.4611768997484464,
+        "long_short_bias": 1.3200205174888329
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 22,
+        "band": 0.30151134457776363,
+        "mv_bias": 5.471487386584967,
+        "mv_realized_vol_annual": 0.6029719076383122,
+        "mv_forecast_vol_annual": 0.1157687897856801,
+        "log_score": 0.07258107529268196,
+        "long_only_bias": 5.155893134721561,
+        "long_short_bias": 2.871332107036805
+      },
+      "COVID crash (wide)": {
+        "n_obs": 52,
+        "band": 0.19611613513818404,
+        "mv_bias": 4.018945336349012,
+        "mv_realized_vol_annual": 0.43656535543538505,
+        "mv_forecast_vol_annual": 0.11892894028098189,
+        "log_score": -3.8748917517292787,
+        "long_only_bias": 3.660974663471674,
+        "long_short_bias": 2.2333556768466125
+      },
+      "2022 drawdown": {
+        "n_obs": 251,
+        "band": 0.08926436853549036,
+        "mv_bias": 1.1808236300598725,
+        "mv_realized_vol_annual": 0.14705861732099793,
+        "mv_forecast_vol_annual": 0.1245594069979402,
+        "log_score": -8.204205921131084,
+        "long_only_bias": 1.0937712837409403,
+        "long_short_bias": 1.0818542738114898
+      }
+    }
+  },
+  {
+    "spec_key": "ewma_halflife252.0",
+    "spec_label": "EWMA (half-life 252d)",
+    "short_label": "EWMA",
+    "asset_set": "industry49",
+    "horizon": "1w",
+    "n_obs": 1345,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 0.9611414344895342,
+        "median": 0.9612507456734272,
+        "p05": 0.9441595700076771,
+        "p95": 0.9770355780089464,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.533942426584235,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 0.9994582797101305,
+        "median": 0.9988553210542173,
+        "p05": 0.9563913499206596,
+        "p95": 1.0453122874275864,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.6027252704791345,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.11398278744815138,
+      "forecast_vol_annual": 0.10296468354493965,
+      "gross_leverage": 3.3511968969121253,
+      "bias": {
+        "n_obs": 1345,
+        "n_portfolios": 1,
+        "mean": 1.108471080722201,
+        "median": 1.108471080722201,
+        "p05": 1.108471080722201,
+        "p95": 1.108471080722201,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.7179289026275116,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -6.8949503525970215,
+    "log_score_ci": [
+      -7.12595435234986,
+      -6.715842969928481
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 101,
+        "band": 0.14071950894605836,
+        "mv_bias": 1.6077288896010793,
+        "mv_realized_vol_annual": 0.17465513281751796,
+        "mv_forecast_vol_annual": 0.11522204833128254,
+        "log_score": -6.09467562199426,
+        "long_only_bias": 1.306202343407619,
+        "long_short_bias": 1.248086547794504
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 5,
+        "band": 0.6324555320336759,
+        "mv_bias": 2.791302073906259,
+        "mv_realized_vol_annual": 0.16521575949881018,
+        "mv_forecast_vol_annual": 0.11259077570437552,
+        "log_score": 1.6173452300367495,
+        "long_only_bias": 3.3040124565653084,
+        "long_short_bias": 2.801456907446661
+      },
+      "COVID crash (wide)": {
+        "n_obs": 11,
+        "band": 0.4264014327112209,
+        "mv_bias": 2.588575069357508,
+        "mv_realized_vol_annual": 0.29685988490044307,
+        "mv_forecast_vol_annual": 0.1162436680618082,
+        "log_score": -2.4952990586917965,
+        "long_only_bias": 2.602021004358882,
+        "long_short_bias": 2.18067591801908
+      },
+      "2022 drawdown": {
+        "n_obs": 50,
+        "band": 0.2,
+        "mv_bias": 1.1791092779088326,
+        "mv_realized_vol_annual": 0.1470654331463468,
+        "mv_forecast_vol_annual": 0.12444896468674689,
+        "log_score": -6.594133499563017,
+        "long_only_bias": 1.014447738616947,
+        "long_short_bias": 1.071065974176348
+      }
+    }
+  },
+  {
+    "spec_key": "ewma_halflife252.0",
+    "spec_label": "EWMA (half-life 252d)",
+    "short_label": "EWMA",
+    "asset_set": "industry49",
+    "horizon": "1m",
+    "n_obs": 336,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 0.9440533579291374,
+        "median": 0.9440062415554493,
+        "p05": 0.9170921848147572,
+        "p95": 0.9705592424861404,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.39288070175438594,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 0.9726366812188205,
+        "median": 0.9715574896778295,
+        "p05": 0.9055663641296261,
+        "p95": 1.0454519014060226,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.7532122807017544,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.12162445000377606,
+      "forecast_vol_annual": 0.10292524341373152,
+      "gross_leverage": 3.3511968969121253,
+      "bias": {
+        "n_obs": 336,
+        "n_portfolios": 1,
+        "mean": 1.2180102631350194,
+        "median": 1.2180102631350194,
+        "p05": 1.2180102631350194,
+        "p95": 1.2180102631350194,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.5719298245614035,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -5.523823532524038,
+    "log_score_ci": [
+      -5.906763827015699,
+      -5.377573357691612
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 25,
+        "band": 0.282842712474619,
+        "mv_bias": 1.7794927386567345,
+        "mv_realized_vol_annual": 0.18849889094872807,
+        "mv_forecast_vol_annual": 0.11426741491561217,
+        "log_score": -4.713623730871125,
+        "long_only_bias": 1.402340613547914,
+        "long_short_bias": 1.154527754246663
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 1,
+        "band": 1.4142135623730951,
+        "mv_bias": 9.00677019099383,
+        "mv_realized_vol_annual": NaN,
+        "mv_forecast_vol_annual": 0.08928533910814213,
+        "log_score": 4.841536507567684,
+        "long_only_bias": 6.998971407260784,
+        "long_short_bias": 2.257701646683809
+      },
+      "COVID crash (wide)": {
+        "n_obs": 3,
+        "band": 0.816496580927726,
+        "mv_bias": 5.545786225644111,
+        "mv_realized_vol_annual": 0.6289906342434873,
+        "mv_forecast_vol_annual": 0.10242563273970276,
+        "log_score": -1.515237676073862,
+        "long_only_bias": 4.2352497776515845,
+        "long_short_bias": 1.6810631872598039
+      },
+      "2022 drawdown": {
+        "n_obs": 12,
+        "band": 0.408248290463863,
+        "mv_bias": 1.4236066937341714,
+        "mv_realized_vol_annual": 0.18334074320831692,
+        "mv_forecast_vol_annual": 0.12377884151740805,
+        "log_score": -4.992392011865289,
+        "long_only_bias": 0.9133244968581116,
+        "long_short_bias": 1.1205861731876836
+      }
+    }
+  },
+  {
+    "spec_key": "ledoit_wolf_window252",
+    "spec_label": "Ledoit-Wolf (1y window)",
+    "short_label": "Ledoit-Wolf",
+    "asset_set": "industry49",
+    "horizon": "1d",
+    "n_obs": 6723,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 6723,
+        "n_portfolios": 2000,
+        "mean": 1.0712640426713838,
+        "median": 1.0717635319245349,
+        "p05": 1.0630640905687396,
+        "p95": 1.0776811064661052,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.4146922961630695,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 6723,
+        "n_portfolios": 2000,
+        "mean": 1.0264921623876393,
+        "median": 1.0258223214051423,
+        "p05": 1.0012404849518197,
+        "p95": 1.054022068210865,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.6275227068345324,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.11879920578031657,
+      "forecast_vol_annual": 0.08961761508740855,
+      "gross_leverage": 3.302303394283842,
+      "bias": {
+        "n_obs": 6723,
+        "n_portfolios": 1,
+        "mean": 1.3130203274601886,
+        "median": 1.3130203274601886,
+        "p05": 1.3130203274601886,
+        "p95": 1.3130203274601886,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.5043465227817746,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -8.494775857328264,
+    "log_score_ci": [
+      -8.618989465598847,
+      -8.386341244932735
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 505,
+        "band": 0.06293167755275526,
+        "mv_bias": 1.5498217734995838,
+        "mv_realized_vol_annual": 0.18245210813310625,
+        "mv_forecast_vol_annual": 0.1293285458382877,
+        "log_score": -7.724216323789934,
+        "long_only_bias": 1.2137207736646534,
+        "long_short_bias": 1.157912503749404
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 22,
+        "band": 0.30151134457776363,
+        "mv_bias": 5.702228093501801,
+        "mv_realized_vol_annual": 0.6177770518584202,
+        "mv_forecast_vol_annual": 0.11836770972851152,
+        "log_score": -1.4921493580243566,
+        "long_only_bias": 4.908038682585398,
+        "long_short_bias": 2.7833989573469484
+      },
+      "COVID crash (wide)": {
+        "n_obs": 52,
+        "band": 0.19611613513818404,
+        "mv_bias": 4.173187942163113,
+        "mv_realized_vol_annual": 0.4430878050983924,
+        "mv_forecast_vol_annual": 0.1274618266861787,
+        "log_score": -4.849033966580053,
+        "long_only_bias": 3.486475741465506,
+        "long_short_bias": 2.1389773277696476
+      },
+      "2022 drawdown": {
+        "n_obs": 251,
+        "band": 0.08926436853549036,
+        "mv_bias": 1.4916229469964375,
+        "mv_realized_vol_annual": 0.1504771432904209,
+        "mv_forecast_vol_annual": 0.10268197453759369,
+        "log_score": -8.13511581196657,
+        "long_only_bias": 1.293350338798578,
+        "long_short_bias": 1.0951139899345552
+      }
+    }
+  },
+  {
+    "spec_key": "ledoit_wolf_window252",
+    "spec_label": "Ledoit-Wolf (1y window)",
+    "short_label": "Ledoit-Wolf",
+    "asset_set": "industry49",
+    "horizon": "1w",
+    "n_obs": 1345,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.0331457861082773,
+        "median": 1.0332839280624158,
+        "p05": 1.0205331945723883,
+        "p95": 1.0453844252600133,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.6259377897990727,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.024239618178762,
+        "median": 1.0226049819301335,
+        "p05": 0.973565633529987,
+        "p95": 1.0797224983082685,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.7405533230293663,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.11500910180421219,
+      "forecast_vol_annual": 0.08961483393498182,
+      "gross_leverage": 3.302303394283842,
+      "bias": {
+        "n_obs": 1345,
+        "n_portfolios": 1,
+        "mean": 1.2955859115309554,
+        "median": 1.2955859115309554,
+        "p05": 1.2955859115309554,
+        "p95": 1.2955859115309554,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.4088098918083462,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -6.902751836883761,
+    "log_score_ci": [
+      -7.120873002737656,
+      -6.741809728886685
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 101,
+        "band": 0.14071950894605836,
+        "mv_bias": 1.5336517838717598,
+        "mv_realized_vol_annual": 0.1790699259615172,
+        "mv_forecast_vol_annual": 0.12916718371306019,
+        "log_score": -6.193115811734158,
+        "long_only_bias": 1.0782172554113147,
+        "long_short_bias": 1.0946351721315837
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 5,
+        "band": 0.6324555320336759,
+        "mv_bias": 2.796197858219424,
+        "mv_realized_vol_annual": 0.24290321491667471,
+        "mv_forecast_vol_annual": 0.11322870811815086,
+        "log_score": 0.3848845176053592,
+        "long_only_bias": 3.173058667606727,
+        "long_short_bias": 2.736830918496798
+      },
+      "COVID crash (wide)": {
+        "n_obs": 11,
+        "band": 0.4264014327112209,
+        "mv_bias": 2.460021955104309,
+        "mv_realized_vol_annual": 0.28228212524413104,
+        "mv_forecast_vol_annual": 0.12288096106594575,
+        "log_score": -3.2449415671369026,
+        "long_only_bias": 2.529365962892963,
+        "long_short_bias": 2.1077802836641575
+      },
+      "2022 drawdown": {
+        "n_obs": 50,
+        "band": 0.2,
+        "mv_bias": 1.6439541024981188,
+        "mv_realized_vol_annual": 0.16047114502839077,
+        "mv_forecast_vol_annual": 0.1021365904694071,
+        "log_score": -6.508655466205049,
+        "long_only_bias": 1.2112906303080342,
+        "long_short_bias": 1.082898279001984
+      }
+    }
+  },
+  {
+    "spec_key": "ledoit_wolf_window252",
+    "spec_label": "Ledoit-Wolf (1y window)",
+    "short_label": "Ledoit-Wolf",
+    "asset_set": "industry49",
+    "horizon": "1m",
+    "n_obs": 336,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.0025526493011163,
+        "median": 1.00246865507926,
+        "p05": 0.9774640537638203,
+        "p95": 1.0275049651511248,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.7968070175438596,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.0012179718335092,
+        "median": 0.9983746869757923,
+        "p05": 0.9291793629725352,
+        "p95": 1.078078025378863,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.8948105263157895,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.12068285519906166,
+      "forecast_vol_annual": 0.08968859750930074,
+      "gross_leverage": 3.302303394283842,
+      "bias": {
+        "n_obs": 336,
+        "n_portfolios": 1,
+        "mean": 1.3980480452337347,
+        "median": 1.3980480452337347,
+        "p05": 1.3980480452337347,
+        "p95": 1.3980480452337347,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.16140350877192983,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -5.515520350454209,
+    "log_score_ci": [
+      -5.880278980730128,
+      -5.368444904027399
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 25,
+        "band": 0.282842712474619,
+        "mv_bias": 1.7710356198325947,
+        "mv_realized_vol_annual": 0.1941833217741624,
+        "mv_forecast_vol_annual": 0.1292298307331145,
+        "log_score": -4.805936162443685,
+        "long_only_bias": 1.1545267760714564,
+        "long_short_bias": 1.015795521384124
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 1,
+        "band": 1.4142135623730951,
+        "mv_bias": 9.948727701131066,
+        "mv_realized_vol_annual": NaN,
+        "mv_forecast_vol_annual": 0.07554269630883949,
+        "log_score": 5.745020946571868,
+        "long_only_bias": 7.305909634026159,
+        "long_short_bias": 2.276379045639981
+      },
+      "COVID crash (wide)": {
+        "n_obs": 3,
+        "band": 0.816496580927726,
+        "mv_bias": 6.049755829915792,
+        "mv_realized_vol_annual": 0.6257243736058874,
+        "mv_forecast_vol_annual": 0.09916923129365668,
+        "log_score": -1.523612152171497,
+        "long_only_bias": 4.379574439966435,
+        "long_short_bias": 1.6718996455801591
+      },
+      "2022 drawdown": {
+        "n_obs": 12,
+        "band": 0.408248290463863,
+        "mv_bias": 1.6611558592923898,
+        "mv_realized_vol_annual": 0.17898521461732342,
+        "mv_forecast_vol_annual": 0.09923172953486264,
+        "log_score": -4.896553871210707,
+        "long_only_bias": 1.0540104324794297,
+        "long_short_bias": 1.1399929173772996
+      }
+    }
+  },
+  {
+    "spec_key": "pca_n_factors5_window252",
+    "spec_label": "PCA factor (k=5, 1y)",
+    "short_label": "PCA factor",
+    "asset_set": "industry49",
+    "horizon": "1d",
+    "n_obs": 6723,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 6723,
+        "n_portfolios": 2000,
+        "mean": 1.0676953745731237,
+        "median": 1.0676182709592719,
+        "p05": 1.0640297697655035,
+        "p95": 1.071534278100052,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.41278544664268585,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 6723,
+        "n_portfolios": 2000,
+        "mean": 1.0370276689506512,
+        "median": 1.0358739986239756,
+        "p05": 1.002239330340525,
+        "p95": 1.0737050346621206,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.6186731864508394,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.1303677156902244,
+      "forecast_vol_annual": 0.07804247125015323,
+      "gross_leverage": 3.1496411226482026,
+      "bias": {
+        "n_obs": 6723,
+        "n_portfolios": 1,
+        "mean": 1.6820623832499906,
+        "median": 1.6820623832499906,
+        "p05": 1.6820623832499906,
+        "p95": 1.6820623832499906,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.22841726618705036,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -8.418242339823156,
+    "log_score_ci": [
+      -8.550912923121494,
+      -8.29789949783177
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 505,
+        "band": 0.06293167755275526,
+        "mv_bias": 2.097628129813289,
+        "mv_realized_vol_annual": 0.2044891290266119,
+        "mv_forecast_vol_annual": 0.11537012548548403,
+        "log_score": -7.593550684565994,
+        "long_only_bias": 1.2124474676452675,
+        "long_short_bias": 1.1721746288805663
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 22,
+        "band": 0.30151134457776363,
+        "mv_bias": 6.3988308669990355,
+        "mv_realized_vol_annual": 0.6178698050052804,
+        "mv_forecast_vol_annual": 0.10060869232459564,
+        "log_score": 0.6798850975239272,
+        "long_only_bias": 4.904475337215247,
+        "long_short_bias": 2.836399415363001
+      },
+      "COVID crash (wide)": {
+        "n_obs": 52,
+        "band": 0.19611613513818404,
+        "mv_bias": 4.761435561797926,
+        "mv_realized_vol_annual": 0.45027794967360824,
+        "mv_forecast_vol_annual": 0.10561085468532752,
+        "log_score": -3.678514302254133,
+        "long_only_bias": 3.4828888498006054,
+        "long_short_bias": 2.1796210594145395
+      },
+      "2022 drawdown": {
+        "n_obs": 251,
+        "band": 0.08926436853549036,
+        "mv_bias": 2.084068652111364,
+        "mv_realized_vol_annual": 0.17873693328920712,
+        "mv_forecast_vol_annual": 0.08914414412811196,
+        "log_score": -7.983625193286509,
+        "long_only_bias": 1.2890319993237176,
+        "long_short_bias": 1.104122691810262
+      }
+    }
+  },
+  {
+    "spec_key": "pca_n_factors5_window252",
+    "spec_label": "PCA factor (k=5, 1y)",
+    "short_label": "PCA factor",
+    "asset_set": "industry49",
+    "horizon": "1w",
+    "n_obs": 1345,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.0294899493487775,
+        "median": 1.0295512459707277,
+        "p05": 1.0184586909472217,
+        "p95": 1.0399912522477504,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.628403400309119,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.0349023260120438,
+        "median": 1.0348042801100477,
+        "p05": 0.9779540963503836,
+        "p95": 1.0921595574033542,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.7288624420401855,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.13008488992870418,
+      "forecast_vol_annual": 0.07804192671903444,
+      "gross_leverage": 3.1496411226482026,
+      "bias": {
+        "n_obs": 1345,
+        "n_portfolios": 1,
+        "mean": 1.6978599113477342,
+        "median": 1.6978599113477342,
+        "p05": 1.6978599113477342,
+        "p95": 1.6978599113477342,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.13292117465224113,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -6.815867055097619,
+    "log_score_ci": [
+      -7.051262767421693,
+      -6.630197965055893
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 101,
+        "band": 0.14071950894605836,
+        "mv_bias": 2.034225731690946,
+        "mv_realized_vol_annual": 0.19463915471407842,
+        "mv_forecast_vol_annual": 0.1152364089360276,
+        "log_score": -6.025028444455804,
+        "long_only_bias": 1.0772525395733232,
+        "long_short_bias": 1.1091946896073976
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 5,
+        "band": 0.6324555320336759,
+        "mv_bias": 2.606176501066024,
+        "mv_realized_vol_annual": 0.136299265981683,
+        "mv_forecast_vol_annual": 0.09679090233888413,
+        "log_score": 2.6662604208506684,
+        "long_only_bias": 3.169904576494213,
+        "long_short_bias": 2.788465208700719
+      },
+      "COVID crash (wide)": {
+        "n_obs": 11,
+        "band": 0.4264014327112209,
+        "mv_bias": 2.943248450829522,
+        "mv_realized_vol_annual": 0.290565748404697,
+        "mv_forecast_vol_annual": 0.10222265233824362,
+        "log_score": -2.0056913918998607,
+        "long_only_bias": 2.524572229064495,
+        "long_short_bias": 2.1482821027057906
+      },
+      "2022 drawdown": {
+        "n_obs": 50,
+        "band": 0.2,
+        "mv_bias": 2.600250485987164,
+        "mv_realized_vol_annual": 0.22054843577867772,
+        "mv_forecast_vol_annual": 0.08881030079856232,
+        "log_score": -6.244777540952182,
+        "long_only_bias": 1.2070670612626218,
+        "long_short_bias": 1.0938566007004207
+      }
+    }
+  },
+  {
+    "spec_key": "pca_n_factors5_window252",
+    "spec_label": "PCA factor (k=5, 1y)",
+    "short_label": "PCA factor",
+    "asset_set": "industry49",
+    "horizon": "1m",
+    "n_obs": 336,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 0.9986513291660758,
+        "median": 0.9988093051119173,
+        "p05": 0.9737377555829393,
+        "p95": 1.0231284862368166,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.7975473684210527,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.01197281865829,
+        "median": 1.0094597815616069,
+        "p05": 0.9387557717920333,
+        "p95": 1.090388939891601,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.8857649122807018,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.13651644543703165,
+      "forecast_vol_annual": 0.07819697719291675,
+      "gross_leverage": 3.1496411226482026,
+      "bias": {
+        "n_obs": 336,
+        "n_portfolios": 1,
+        "mean": 1.799523199493125,
+        "median": 1.799523199493125,
+        "p05": 1.799523199493125,
+        "p95": 1.799523199493125,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.0,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -5.427957530809369,
+    "log_score_ci": [
+      -5.824337225955987,
+      -5.246455271762384
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 25,
+        "band": 0.282842712474619,
+        "mv_bias": 2.1778966137313036,
+        "mv_realized_vol_annual": 0.20693800064965562,
+        "mv_forecast_vol_annual": 0.11579708942370938,
+        "log_score": -4.614352276046342,
+        "long_only_bias": 1.152992881254157,
+        "long_short_bias": 1.029884434280846
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 1,
+        "band": 1.4142135623730951,
+        "mv_bias": 11.311018142238792,
+        "mv_realized_vol_annual": NaN,
+        "mv_forecast_vol_annual": 0.06879377577699972,
+        "log_score": 6.769002116371828,
+        "long_only_bias": 7.27080679140421,
+        "long_short_bias": 2.304553896863569
+      },
+      "COVID crash (wide)": {
+        "n_obs": 3,
+        "band": 0.816496580927726,
+        "mv_bias": 6.959809993127129,
+        "mv_realized_vol_annual": 0.6368191664789876,
+        "mv_forecast_vol_annual": 0.0840388706911831,
+        "log_score": -0.8613639913494998,
+        "long_only_bias": 4.359764026499088,
+        "long_short_bias": 1.697216966920036
+      },
+      "2022 drawdown": {
+        "n_obs": 12,
+        "band": 0.408248290463863,
+        "mv_bias": 2.892674080570438,
+        "mv_realized_vol_annual": 0.24734823895289562,
+        "mv_forecast_vol_annual": 0.0870735551375319,
+        "log_score": -4.634544827766787,
+        "long_only_bias": 1.0507932156353663,
+        "long_short_bias": 1.150780467765059
+      }
+    }
+  },
+  {
+    "spec_key": "fundamental_factor_halflife63.0_window252",
+    "spec_label": "FF5+Mom factor (1y, factor HL 63d)",
+    "short_label": "FF5+Mom factor",
+    "asset_set": "industry49",
+    "horizon": "1d",
+    "n_obs": 6723,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 6723,
+        "n_portfolios": 2000,
+        "mean": 1.0313557560570465,
+        "median": 1.0311762959007822,
+        "p05": 1.0253689192022215,
+        "p95": 1.0378152507379912,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.4840570293764988,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 6723,
+        "n_portfolios": 2000,
+        "mean": 1.0080832880454982,
+        "median": 1.0045705500868811,
+        "p05": 0.9435076305629262,
+        "p95": 1.0811770894447656,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.6398873651079137,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.12452754820669076,
+      "forecast_vol_annual": 0.07869561966355805,
+      "gross_leverage": 3.0034582926125317,
+      "bias": {
+        "n_obs": 6723,
+        "n_portfolios": 1,
+        "mean": 1.570061299375478,
+        "median": 1.570061299375478,
+        "p05": 1.570061299375478,
+        "p95": 1.570061299375478,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.2511990407673861,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -8.474741222117371,
+    "log_score_ci": [
+      -8.597743745263017,
+      -8.365607029611896
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 505,
+        "band": 0.06293167755275526,
+        "mv_bias": 1.9834550442853631,
+        "mv_realized_vol_annual": 0.19629803413730423,
+        "mv_forecast_vol_annual": 0.11217474362998049,
+        "log_score": -7.708870953893434,
+        "long_only_bias": 1.1016904094469444,
+        "long_short_bias": 1.1008241459762083
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 22,
+        "band": 0.30151134457776363,
+        "mv_bias": 5.859688894126013,
+        "mv_realized_vol_annual": 0.5512125128246328,
+        "mv_forecast_vol_annual": 0.10647196084727903,
+        "log_score": -1.167302364377419,
+        "long_only_bias": 3.8226335401088707,
+        "long_short_bias": 2.6632559760569587
+      },
+      "COVID crash (wide)": {
+        "n_obs": 52,
+        "band": 0.19611613513818404,
+        "mv_bias": 4.480739079632432,
+        "mv_realized_vol_annual": 0.41243665332612184,
+        "mv_forecast_vol_annual": 0.11405815140834102,
+        "log_score": -4.681694062501855,
+        "long_only_bias": 2.7683519032970922,
+        "long_short_bias": 2.0317713878399406
+      },
+      "2022 drawdown": {
+        "n_obs": 251,
+        "band": 0.08926436853549036,
+        "mv_bias": 2.008032222040621,
+        "mv_realized_vol_annual": 0.16055214784107363,
+        "mv_forecast_vol_annual": 0.0836131754838279,
+        "log_score": -8.080149687350211,
+        "long_only_bias": 1.1719148114058844,
+        "long_short_bias": 1.0602499398372476
+      }
+    }
+  },
+  {
+    "spec_key": "fundamental_factor_halflife63.0_window252",
+    "spec_label": "FF5+Mom factor (1y, factor HL 63d)",
+    "short_label": "FF5+Mom factor",
+    "asset_set": "industry49",
+    "horizon": "1w",
+    "n_obs": 1345,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.0093537803863157,
+        "median": 1.0095577554415738,
+        "p05": 0.9935093624792856,
+        "p95": 1.024047826367153,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.7279868624420401,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.0070498829865175,
+        "median": 1.0037934623693103,
+        "p05": 0.9285803831026557,
+        "p95": 1.0989671185043073,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.7460262751159197,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.12482043039912472,
+      "forecast_vol_annual": 0.07869522268439608,
+      "gross_leverage": 3.0034582926125317,
+      "bias": {
+        "n_obs": 1345,
+        "n_portfolios": 1,
+        "mean": 1.5908006562452546,
+        "median": 1.5908006562452546,
+        "p05": 1.5908006562452546,
+        "p95": 1.5908006562452546,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.1367851622874807,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -6.872936866815688,
+    "log_score_ci": [
+      -7.093832805898925,
+      -6.7035816040467004
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 101,
+        "band": 0.14071950894605836,
+        "mv_bias": 1.9693291799574604,
+        "mv_realized_vol_annual": 0.1942707480567081,
+        "mv_forecast_vol_annual": 0.11198153008628811,
+        "log_score": -6.129585406157236,
+        "long_only_bias": 0.9804239052780214,
+        "long_short_bias": 1.0434846128007529
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 5,
+        "band": 0.6324555320336759,
+        "mv_bias": 4.047621173233932,
+        "mv_realized_vol_annual": 0.2582726723539801,
+        "mv_forecast_vol_annual": 0.10116770321854063,
+        "log_score": 0.4923635439345448,
+        "long_only_bias": 2.5048889042269247,
+        "long_short_bias": 2.6335283529797833
+      },
+      "COVID crash (wide)": {
+        "n_obs": 11,
+        "band": 0.4264014327112209,
+        "mv_bias": 3.241496501726886,
+        "mv_realized_vol_annual": 0.3259014718406205,
+        "mv_forecast_vol_annual": 0.10963241155075738,
+        "log_score": -3.2348627571915403,
+        "long_only_bias": 2.121957359201625,
+        "long_short_bias": 2.015020317264329
+      },
+      "2022 drawdown": {
+        "n_obs": 50,
+        "band": 0.2,
+        "mv_bias": 2.1701348051169167,
+        "mv_realized_vol_annual": 0.17336421356663453,
+        "mv_forecast_vol_annual": 0.08328537690606064,
+        "log_score": -6.4432359525859395,
+        "long_only_bias": 1.100775624175085,
+        "long_short_bias": 1.0492798947324182
+      }
+    }
+  },
+  {
+    "spec_key": "fundamental_factor_halflife63.0_window252",
+    "spec_label": "FF5+Mom factor (1y, factor HL 63d)",
+    "short_label": "FF5+Mom factor",
+    "asset_set": "industry49",
+    "horizon": "1m",
+    "n_obs": 336,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 0.9861719250520462,
+        "median": 0.9865655165703076,
+        "p05": 0.9587701002210746,
+        "p95": 1.0124242174827311,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.8460192982456141,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 0.9864899826707124,
+        "median": 0.9840644811454607,
+        "p05": 0.8954140951735903,
+        "p95": 1.0852726010649252,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.8813701754385965,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.1319721904511891,
+      "forecast_vol_annual": 0.07880252213321566,
+      "gross_leverage": 3.0034582926125317,
+      "bias": {
+        "n_obs": 336,
+        "n_portfolios": 1,
+        "mean": 1.7684188618247627,
+        "median": 1.7684188618247627,
+        "p05": 1.7684188618247627,
+        "p95": 1.7684188618247627,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.0,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -5.481442961649283,
+    "log_score_ci": [
+      -5.870291578757529,
+      -5.31315419091412
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 25,
+        "band": 0.282842712474619,
+        "mv_bias": 2.1728268892367235,
+        "mv_realized_vol_annual": 0.20309172652849913,
+        "mv_forecast_vol_annual": 0.11168762556044316,
+        "log_score": -4.747122923915373,
+        "long_only_bias": 1.0986589198122048,
+        "long_short_bias": 0.970098750107808
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 1,
+        "band": 1.4142135623730951,
+        "mv_bias": 14.329233008465966,
+        "mv_realized_vol_annual": NaN,
+        "mv_forecast_vol_annual": 0.06226981394112573,
+        "log_score": 6.739652326067716,
+        "long_only_bias": 6.847107494035161,
+        "long_short_bias": 2.254528391911056
+      },
+      "COVID crash (wide)": {
+        "n_obs": 3,
+        "band": 0.816496580927726,
+        "mv_bias": 8.508883195864168,
+        "mv_realized_vol_annual": 0.689333198621379,
+        "mv_forecast_vol_annual": 0.08661022168240022,
+        "log_score": -1.0002609454897675,
+        "long_only_bias": 4.066686784677955,
+        "long_short_bias": 1.640224406257757
+      },
+      "2022 drawdown": {
+        "n_obs": 12,
+        "band": 0.408248290463863,
+        "mv_bias": 2.45390749144552,
+        "mv_realized_vol_annual": 0.19564444959309849,
+        "mv_forecast_vol_annual": 0.08149752564754165,
+        "log_score": -4.865430254657535,
+        "long_only_bias": 0.9535280824802227,
+        "long_short_bias": 1.1066441726988334
+      }
+    }
+  },
+  {
+    "spec_key": "vra[ewma_halflife252.0]_halflife504.0",
+    "spec_label": "EWMA (half-life 252d) + regime adj. (HL 504d)",
+    "short_label": "EWMA + VRA",
+    "asset_set": "industry49",
+    "horizon": "1d",
+    "n_obs": 6723,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 6723,
+        "n_portfolios": 2000,
+        "mean": 0.9917361038746387,
+        "median": 0.9917693187215162,
+        "p05": 0.9870072944530904,
+        "p95": 0.9962908922288805,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.3000513339328537,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 6723,
+        "n_portfolios": 2000,
+        "mean": 0.987909779985162,
+        "median": 0.9874381498764291,
+        "p05": 0.9741297988578966,
+        "p95": 1.0031627529466873,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.5182510491606714,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.11824849809822563,
+      "forecast_vol_annual": 0.10651915894096121,
+      "gross_leverage": 3.3511968969121253,
+      "bias": {
+        "n_obs": 6723,
+        "n_portfolios": 1,
+        "mean": 1.116566529259539,
+        "median": 1.116566529259539,
+        "p05": 1.116566529259539,
+        "p95": 1.116566529259539,
+        "band": 0.01724778946014073,
+        "share_in_band": 0.5442146282973621,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -8.487628934544821,
+    "log_score_ci": [
+      -8.608711459388642,
+      -8.38159995381193
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 505,
+        "band": 0.06293167755275526,
+        "mv_bias": 1.4116010239813903,
+        "mv_realized_vol_annual": 0.17762233175085995,
+        "mv_forecast_vol_annual": 0.13627627439960066,
+        "log_score": -7.741645374418517,
+        "long_only_bias": 1.2946239963779207,
+        "long_short_bias": 1.17496789528936
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 22,
+        "band": 0.30151134457776363,
+        "mv_bias": 5.161627791298499,
+        "mv_realized_vol_annual": 0.6029719076383121,
+        "mv_forecast_vol_annual": 0.13140788240716728,
+        "log_score": -1.7833802641595484,
+        "long_only_bias": 4.779940197300693,
+        "long_short_bias": 2.55108080450134
+      },
+      "COVID crash (wide)": {
+        "n_obs": 52,
+        "band": 0.19611613513818404,
+        "mv_bias": 3.790299644854381,
+        "mv_realized_vol_annual": 0.43656535543538494,
+        "mv_forecast_vol_annual": 0.14013076593806786,
+        "log_score": -4.9663285289438575,
+        "long_only_bias": 3.3755949723514496,
+        "long_short_bias": 1.9517838406147023
+      },
+      "2022 drawdown": {
+        "n_obs": 251,
+        "band": 0.08926436853549036,
+        "mv_bias": 1.085345284853866,
+        "mv_realized_vol_annual": 0.14705861732099793,
+        "mv_forecast_vol_annual": 0.13558987247483587,
+        "log_score": -8.228073350574743,
+        "long_only_bias": 1.0051078778779934,
+        "long_short_bias": 0.9945108561309947
+      }
+    }
+  },
+  {
+    "spec_key": "vra[ewma_halflife252.0]_halflife504.0",
+    "spec_label": "EWMA (half-life 252d) + regime adj. (HL 504d)",
+    "short_label": "EWMA + VRA",
+    "asset_set": "industry49",
+    "horizon": "1w",
+    "n_obs": 1345,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 0.9412488108155398,
+        "median": 0.9413346567820416,
+        "p05": 0.9257160911325258,
+        "p95": 0.9563396172987694,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.5650428902627511,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 0.9851645438439359,
+        "median": 0.9846076659972872,
+        "p05": 0.943799167846898,
+        "p95": 1.0290752683744846,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.5734408809891809,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.11398278744815138,
+      "forecast_vol_annual": 0.1065165212371672,
+      "gross_leverage": 3.3511968969121253,
+      "bias": {
+        "n_obs": 1345,
+        "n_portfolios": 1,
+        "mean": 1.082099203163931,
+        "median": 1.082099203163931,
+        "p05": 1.082099203163931,
+        "p95": 1.082099203163931,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.6653786707882535,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -6.899221029666906,
+    "log_score_ci": [
+      -7.116652743478048,
+      -6.7392050159207475
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 101,
+        "band": 0.14071950894605836,
+        "mv_bias": 1.4070861858538162,
+        "mv_realized_vol_annual": 0.174655132817518,
+        "mv_forecast_vol_annual": 0.13596923421288978,
+        "log_score": -6.211231756478131,
+        "long_only_bias": 1.1435337833334507,
+        "long_short_bias": 1.1109779003643074
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 5,
+        "band": 0.6324555320336759,
+        "mv_bias": 2.6639416056167136,
+        "mv_realized_vol_annual": 0.16521575949880926,
+        "mv_forecast_vol_annual": 0.12631751807928232,
+        "log_score": 0.09385440212576768,
+        "long_only_bias": 3.1062748520340673,
+        "long_short_bias": 2.540086239872871
+      },
+      "COVID crash (wide)": {
+        "n_obs": 11,
+        "band": 0.4264014327112209,
+        "mv_bias": 2.3892149964680214,
+        "mv_realized_vol_annual": 0.29685988490044274,
+        "mv_forecast_vol_annual": 0.1355337383722929,
+        "log_score": -3.3634755665599343,
+        "long_only_bias": 2.448289190352631,
+        "long_short_bias": 1.949348177601244
+      },
+      "2022 drawdown": {
+        "n_obs": 50,
+        "band": 0.2,
+        "mv_bias": 1.0842158976109242,
+        "mv_realized_vol_annual": 0.1470654331463468,
+        "mv_forecast_vol_annual": 0.13547273044794017,
+        "log_score": -6.617991015933553,
+        "long_only_bias": 0.9320453820538664,
+        "long_short_bias": 0.9846195400067017
+      }
+    }
+  },
+  {
+    "spec_key": "vra[ewma_halflife252.0]_halflife504.0",
+    "spec_label": "EWMA (half-life 252d) + regime adj. (HL 504d)",
+    "short_label": "EWMA + VRA",
+    "asset_set": "industry49",
+    "horizon": "1m",
+    "n_obs": 336,
+    "n_assets": 49,
+    "bias": {
+      "long_only": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 0.920936437447095,
+        "median": 0.9210496025689154,
+        "p05": 0.8952482422883341,
+        "p95": 0.9463194917601353,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.5103245614035088,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 0.9625384350913919,
+        "median": 0.9614656685536388,
+        "p05": 0.8990954128803117,
+        "p95": 1.0296380593853562,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.7378543859649123,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.12162445000377604,
+      "forecast_vol_annual": 0.10651241445463329,
+      "gross_leverage": 3.3511968969121253,
+      "bias": {
+        "n_obs": 336,
+        "n_portfolios": 1,
+        "mean": 1.1951434581681726,
+        "median": 1.1951434581681726,
+        "p05": 1.1951434581681726,
+        "p95": 1.1951434581681726,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.6,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -5.523211780142111,
+    "log_score_ci": [
+      -5.893079392617499,
+      -5.378972879782819
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 25,
+        "band": 0.282842712474619,
+        "mv_bias": 1.6021147609272108,
+        "mv_realized_vol_annual": 0.18849889094872815,
+        "mv_forecast_vol_annual": 0.1345875672389656,
+        "log_score": -4.828530672475292,
+        "long_only_bias": 1.2404122567683673,
+        "long_short_bias": 1.0273483439556754
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 1,
+        "band": 1.4142135623730951,
+        "mv_bias": 9.036846620650476,
+        "mv_realized_vol_annual": NaN,
+        "mv_forecast_vol_annual": 0.08898817967479296,
+        "log_score": 4.913525806307363,
+        "long_only_bias": 7.022343167251936,
+        "long_short_bias": 2.265240820363413
+      },
+      "COVID crash (wide)": {
+        "n_obs": 3,
+        "band": 0.816496580927726,
+        "mv_bias": 5.440765341528131,
+        "mv_realized_vol_annual": 0.6289906342434866,
+        "mv_forecast_vol_annual": 0.11277266271954266,
+        "log_score": -1.6648701303873974,
+        "long_only_bias": 4.198411175248037,
+        "long_short_bias": 1.6329667324554593
+      },
+      "2022 drawdown": {
+        "n_obs": 12,
+        "band": 0.408248290463863,
+        "mv_bias": 1.3109817329399884,
+        "mv_realized_vol_annual": 0.18334074320831695,
+        "mv_forecast_vol_annual": 0.1346775066699789,
+        "log_score": -5.049668967136146,
+        "long_only_bias": 0.8388985971062828,
+        "long_short_bias": 1.0306010723421914
+      }
+    }
+  },
+  {
+    "spec_key": "sample_window756",
+    "spec_label": "Sample (3y window)",
+    "short_label": "Sample",
+    "asset_set": "size_bm_25",
+    "horizon": "1d",
+    "n_obs": 6722,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 6722,
+        "n_portfolios": 2000,
+        "mean": 1.0780718152393642,
+        "median": 1.077736081558186,
+        "p05": 1.070055116017849,
+        "p95": 1.0870128080687607,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.3534257982311498,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 6722,
+        "n_portfolios": 2000,
+        "mean": 1.076029585183129,
+        "median": 1.0742948857922807,
+        "p05": 1.0406407164597338,
+        "p95": 1.1177080831503812,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.4393420776495278,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.13328494504510452,
+      "forecast_vol_annual": 0.10912508967259484,
+      "gross_leverage": 5.400743642432471,
+      "bias": {
+        "n_obs": 6722,
+        "n_portfolios": 1,
+        "mean": 1.2313840715724906,
+        "median": 1.2313840715724906,
+        "p05": 1.2313840715724906,
+        "p95": 1.2313840715724906,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.5534402638285114,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -9.88834815255652,
+    "log_score_ci": [
+      -10.057116454119592,
+      -9.730840173931329
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 505,
+        "band": 0.06293167755275526,
+        "mv_bias": 1.8399145503638388,
+        "mv_realized_vol_annual": 0.2107969563335088,
+        "mv_forecast_vol_annual": 0.12590004687328063,
+        "log_score": -8.746452430040128,
+        "long_only_bias": 1.7123328688537145,
+        "long_short_bias": 1.6462773341448773
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 22,
+        "band": 0.30151134457776363,
+        "mv_bias": 6.435376805077792,
+        "mv_realized_vol_annual": 0.7178725884098214,
+        "mv_forecast_vol_annual": 0.11318187014424444,
+        "log_score": 0.5876857744884184,
+        "long_only_bias": 5.744321539162723,
+        "long_short_bias": 3.415461283874803
+      },
+      "COVID crash (wide)": {
+        "n_obs": 52,
+        "band": 0.19611613513818404,
+        "mv_bias": 4.393076335765188,
+        "mv_realized_vol_annual": 0.4879501295462804,
+        "mv_forecast_vol_annual": 0.12011896266096066,
+        "log_score": -4.367005792477243,
+        "long_only_bias": 4.135677321115969,
+        "long_short_bias": 2.650233131243279
+      },
+      "2022 drawdown": {
+        "n_obs": 251,
+        "band": 0.08926436853549036,
+        "mv_bias": 1.0493713210702111,
+        "mv_realized_vol_annual": 0.18014513978822225,
+        "mv_forecast_vol_annual": 0.17249664184890878,
+        "log_score": -9.568526685956332,
+        "long_only_bias": 0.9015204211985794,
+        "long_short_bias": 0.919849970786965
+      }
+    }
+  },
+  {
+    "spec_key": "sample_window756",
+    "spec_label": "Sample (3y window)",
+    "short_label": "Sample",
+    "asset_set": "size_bm_25",
+    "horizon": "1w",
+    "n_obs": 1345,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.0403666103834244,
+        "median": 1.0404961533340145,
+        "p05": 1.0231519460030722,
+        "p95": 1.0568013358654502,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.459717542503864,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.0776348640132523,
+        "median": 1.0762130534173746,
+        "p05": 1.007530360261617,
+        "p95": 1.1562607753373189,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.4695150695517774,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.1334188865595661,
+      "forecast_vol_annual": 0.10911048646152165,
+      "gross_leverage": 5.400743642432471,
+      "bias": {
+        "n_obs": 1345,
+        "n_portfolios": 1,
+        "mean": 1.284709109326512,
+        "median": 1.284709109326512,
+        "p05": 1.284709109326512,
+        "p95": 1.284709109326512,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.5641421947449768,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -8.300831283353496,
+    "log_score_ci": [
+      -8.591872496137006,
+      -8.081946911082673
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 101,
+        "band": 0.14071950894605836,
+        "mv_bias": 1.7946369738829577,
+        "mv_realized_vol_annual": 0.19793308197410225,
+        "mv_forecast_vol_annual": 0.12539253317576016,
+        "log_score": -7.238169826666553,
+        "long_only_bias": 1.6296428990787075,
+        "long_short_bias": 1.5199004449936329
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 5,
+        "band": 0.6324555320336759,
+        "mv_bias": 5.8233422191086275,
+        "mv_realized_vol_annual": 0.6155312138731408,
+        "mv_forecast_vol_annual": 0.10910021095632007,
+        "log_score": 1.9287642419612918,
+        "long_only_bias": 5.572083155340485,
+        "long_short_bias": 3.6387547797358155
+      },
+      "COVID crash (wide)": {
+        "n_obs": 10,
+        "band": 0.4472135954999579,
+        "mv_bias": 4.16307376108976,
+        "mv_realized_vol_annual": 0.45371014388205044,
+        "mv_forecast_vol_annual": 0.11930330106113445,
+        "log_score": -2.5364931560223183,
+        "long_only_bias": 4.166791512876935,
+        "long_short_bias": 2.8351027714615364
+      },
+      "2022 drawdown": {
+        "n_obs": 51,
+        "band": 0.19802950859533486,
+        "mv_bias": 1.1072319652880223,
+        "mv_realized_vol_annual": 0.1919728188026487,
+        "mv_forecast_vol_annual": 0.17233818566853631,
+        "log_score": -8.000999604610445,
+        "long_only_bias": 0.8037686084670166,
+        "long_short_bias": 0.8755994656543743
+      }
+    }
+  },
+  {
+    "spec_key": "sample_window756",
+    "spec_label": "Sample (3y window)",
+    "short_label": "Sample",
+    "asset_set": "size_bm_25",
+    "horizon": "1m",
+    "n_obs": 336,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.1327254517725005,
+        "median": 1.1323745910295369,
+        "p05": 1.1038037131665448,
+        "p95": 1.1627255300683301,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.34137368421052633,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.1122389597169717,
+        "median": 1.1039355248340805,
+        "p05": 0.9658722658251119,
+        "p95": 1.2841147261515486,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.578,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.152822062044323,
+      "forecast_vol_annual": 0.10901409822028618,
+      "gross_leverage": 5.400743642432471,
+      "bias": {
+        "n_obs": 336,
+        "n_portfolios": 1,
+        "mean": 1.5673137451816,
+        "median": 1.5673137451816,
+        "p05": 1.5673137451816,
+        "p95": 1.5673137451816,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.3684210526315789,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -6.840561192606772,
+    "log_score_ci": [
+      -7.346849323609517,
+      -6.634232539932133
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 25,
+        "band": 0.282842712474619,
+        "mv_bias": 2.5941111409149182,
+        "mv_realized_vol_annual": 0.2704243597817056,
+        "mv_forecast_vol_annual": 0.12354552220521832,
+        "log_score": -5.749998809574979,
+        "long_only_bias": 1.851881567646008,
+        "long_short_bias": 1.4998675865778723
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 1,
+        "band": 1.4142135623730951,
+        "mv_bias": 12.156448140508003,
+        "mv_realized_vol_annual": NaN,
+        "mv_forecast_vol_annual": 0.09376033961208675,
+        "log_score": 17.615733165132692,
+        "long_only_bias": 10.84310535776155,
+        "long_short_bias": 4.160354063659936
+      },
+      "COVID crash (wide)": {
+        "n_obs": 3,
+        "band": 0.816496580927726,
+        "mv_bias": 7.305615650304109,
+        "mv_realized_vol_annual": 0.7915182449116588,
+        "mv_forecast_vol_annual": 0.10637369165763537,
+        "log_score": 2.0839676446147926,
+        "long_only_bias": 6.565997488940512,
+        "long_short_bias": 2.7706652407210233
+      },
+      "2022 drawdown": {
+        "n_obs": 13,
+        "band": 0.3922322702763681,
+        "mv_bias": 0.8552146667793185,
+        "mv_realized_vol_annual": 0.15250184831023722,
+        "mv_forecast_vol_annual": 0.17162806217172574,
+        "log_score": -6.643529052372982,
+        "long_only_bias": 0.6601341355747363,
+        "long_short_bias": 0.967984109566861
+      }
+    }
+  },
+  {
+    "spec_key": "ewma_halflife252.0",
+    "spec_label": "EWMA (half-life 252d)",
+    "short_label": "EWMA",
+    "asset_set": "size_bm_25",
+    "horizon": "1d",
+    "n_obs": 6722,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 6722,
+        "n_portfolios": 2000,
+        "mean": 1.0291780199260196,
+        "median": 1.0292298820091434,
+        "p05": 1.024836997498025,
+        "p95": 1.0334020749049508,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.3544714435616849,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 6722,
+        "n_portfolios": 2000,
+        "mean": 1.0178505698773064,
+        "median": 1.0179671936077013,
+        "p05": 1.00333290224753,
+        "p95": 1.0314284115987935,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.47119457352720734,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.12802827904245692,
+      "forecast_vol_annual": 0.11245698810728613,
+      "gross_leverage": 5.40140620268241,
+      "bias": {
+        "n_obs": 6722,
+        "n_portfolios": 1,
+        "mean": 1.1175575076236703,
+        "median": 1.1175575076236703,
+        "p05": 1.1175575076236703,
+        "p95": 1.1175575076236703,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.5185129665717284,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -9.980687683720701,
+    "log_score_ci": [
+      -10.127439408581285,
+      -9.845256873455021
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 505,
+        "band": 0.06293167755275526,
+        "mv_bias": 1.5537461477322283,
+        "mv_realized_vol_annual": 0.20403783984280086,
+        "mv_forecast_vol_annual": 0.13962491364980614,
+        "log_score": -9.14921434613252,
+        "long_only_bias": 1.4603610214438432,
+        "long_short_bias": 1.4061095298581037
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 22,
+        "band": 0.30151134457776363,
+        "mv_bias": 5.78754737580452,
+        "mv_realized_vol_annual": 0.7096844437280557,
+        "mv_forecast_vol_annual": 0.12475527526272233,
+        "log_score": -0.6888644890294495,
+        "long_only_bias": 5.013715955462955,
+        "long_short_bias": 3.1876954381028364
+      },
+      "COVID crash (wide)": {
+        "n_obs": 52,
+        "band": 0.19611613513818404,
+        "mv_bias": 3.9690626977060006,
+        "mv_realized_vol_annual": 0.48483745962917446,
+        "mv_forecast_vol_annual": 0.13419650486944382,
+        "log_score": -5.092678256420149,
+        "long_only_bias": 3.584693789832156,
+        "long_short_bias": 2.437474073364987
+      },
+      "2022 drawdown": {
+        "n_obs": 251,
+        "band": 0.08926436853549036,
+        "mv_bias": 1.0873834124509243,
+        "mv_realized_vol_annual": 0.16413305053677207,
+        "mv_forecast_vol_annual": 0.15099332668834306,
+        "log_score": -9.644642056905953,
+        "long_only_bias": 1.0434744123671185,
+        "long_short_bias": 0.9614863937905873
+      }
+    }
+  },
+  {
+    "spec_key": "ewma_halflife252.0",
+    "spec_label": "EWMA (half-life 252d)",
+    "short_label": "EWMA",
+    "asset_set": "size_bm_25",
+    "horizon": "1w",
+    "n_obs": 1345,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 0.9948691791493056,
+        "median": 0.994929927958091,
+        "p05": 0.9786348044624515,
+        "p95": 1.011513836021847,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.5470653013910356,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.021639531269935,
+        "median": 1.019326383238477,
+        "p05": 0.9648406092086297,
+        "p95": 1.0838523659014077,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.5343037094281299,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.12716285881568554,
+      "forecast_vol_annual": 0.11244003324949901,
+      "gross_leverage": 5.40140620268241,
+      "bias": {
+        "n_obs": 1345,
+        "n_portfolios": 1,
+        "mean": 1.167335870612978,
+        "median": 1.167335870612978,
+        "p05": 1.167335870612978,
+        "p95": 1.167335870612978,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.5842349304482226,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -8.388237650454634,
+    "log_score_ci": [
+      -8.642596123455608,
+      -8.199069592653107
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 101,
+        "band": 0.14071950894605836,
+        "mv_bias": 1.464721628708781,
+        "mv_realized_vol_annual": 0.18487575771704812,
+        "mv_forecast_vol_annual": 0.13922735951983045,
+        "log_score": -7.598179369121998,
+        "long_only_bias": 1.3917079019653407,
+        "long_short_bias": 1.2998205087132337
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 5,
+        "band": 0.6324555320336759,
+        "mv_bias": 5.321789164615155,
+        "mv_realized_vol_annual": 0.5965976217165655,
+        "mv_forecast_vol_annual": 0.11887883191547588,
+        "log_score": 0.7976335117353941,
+        "long_only_bias": 4.949671756252916,
+        "long_short_bias": 3.422388320482631
+      },
+      "COVID crash (wide)": {
+        "n_obs": 10,
+        "band": 0.4472135954999579,
+        "mv_bias": 3.832315910150393,
+        "mv_realized_vol_annual": 0.45301854567372396,
+        "mv_forecast_vol_annual": 0.1331020258471949,
+        "log_score": -3.1663752393515185,
+        "long_only_bias": 3.6713609642029637,
+        "long_short_bias": 2.641596035709068
+      },
+      "2022 drawdown": {
+        "n_obs": 51,
+        "band": 0.19802950859533486,
+        "mv_bias": 1.1858625665084743,
+        "mv_realized_vol_annual": 0.18080527043664885,
+        "mv_forecast_vol_annual": 0.1509533755650223,
+        "log_score": -8.074360475668197,
+        "long_only_bias": 0.9288065795970761,
+        "long_short_bias": 0.9144109968092045
+      }
+    }
+  },
+  {
+    "spec_key": "ewma_halflife252.0",
+    "spec_label": "EWMA (half-life 252d)",
+    "short_label": "EWMA",
+    "asset_set": "size_bm_25",
+    "horizon": "1m",
+    "n_obs": 336,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.0849736334102205,
+        "median": 1.084503554382912,
+        "p05": 1.0601573406359737,
+        "p95": 1.110845341254572,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.28048070175438594,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.0578023336794748,
+        "median": 1.0508970124883532,
+        "p05": 0.9287157940680063,
+        "p95": 1.201078519492515,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.6472333333333333,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.14642184297046248,
+      "forecast_vol_annual": 0.11233986699118552,
+      "gross_leverage": 5.40140620268241,
+      "bias": {
+        "n_obs": 336,
+        "n_portfolios": 1,
+        "mean": 1.4409908358918155,
+        "median": 1.4409908358918155,
+        "p05": 1.4409908358918155,
+        "p95": 1.4409908358918155,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.4105263157894737,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -6.936821137711658,
+    "log_score_ci": [
+      -7.399999533854353,
+      -6.744884994876703
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 25,
+        "band": 0.282842712474619,
+        "mv_bias": 2.0937058233161667,
+        "mv_realized_vol_annual": 0.2482905665164362,
+        "mv_forecast_vol_annual": 0.13776918294286172,
+        "log_score": -6.13774946875963,
+        "long_only_bias": 1.6251620964291313,
+        "long_short_bias": 1.2957258084843752
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 1,
+        "band": 1.4142135623730951,
+        "mv_bias": 12.082715476487719,
+        "mv_realized_vol_annual": NaN,
+        "mv_forecast_vol_annual": 0.09668460918429478,
+        "log_score": 16.45151145637324,
+        "long_only_bias": 10.35248848706839,
+        "long_short_bias": 4.03970689155345
+      },
+      "COVID crash (wide)": {
+        "n_obs": 3,
+        "band": 0.816496580927726,
+        "mv_bias": 7.195322316163761,
+        "mv_realized_vol_annual": 0.8033273938185372,
+        "mv_forecast_vol_annual": 0.11516515641688897,
+        "log_score": 1.5772480854438566,
+        "long_only_bias": 6.1831444665475885,
+        "long_short_bias": 2.658134003953707
+      },
+      "2022 drawdown": {
+        "n_obs": 13,
+        "band": 0.3922322702763681,
+        "mv_bias": 0.9990258052744151,
+        "mv_realized_vol_annual": 0.15747736841068408,
+        "mv_forecast_vol_annual": 0.15074190808183557,
+        "log_score": -6.726158098866316,
+        "long_only_bias": 0.7663452951407326,
+        "long_short_bias": 1.0023557607951348
+      }
+    }
+  },
+  {
+    "spec_key": "ledoit_wolf_window252",
+    "spec_label": "Ledoit-Wolf (1y window)",
+    "short_label": "Ledoit-Wolf",
+    "asset_set": "size_bm_25",
+    "horizon": "1d",
+    "n_obs": 6722,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 6722,
+        "n_portfolios": 2000,
+        "mean": 1.0676482578973565,
+        "median": 1.067693732907589,
+        "p05": 1.0649765614645075,
+        "p95": 1.0701608587366793,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.4663605906160995,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 6722,
+        "n_portfolios": 2000,
+        "mean": 1.0150782466327075,
+        "median": 1.01149489668377,
+        "p05": 0.9047890058895212,
+        "p95": 1.139669646903629,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.5667307000449707,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.14230403536642716,
+      "forecast_vol_annual": 0.10069091844537358,
+      "gross_leverage": 4.183121394709317,
+      "bias": {
+        "n_obs": 6722,
+        "n_portfolios": 1,
+        "mean": 1.3237244026790145,
+        "median": 1.3237244026790145,
+        "p05": 1.3237244026790145,
+        "p95": 1.3237244026790145,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.505321540998351,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -9.9519467432466,
+    "log_score_ci": [
+      -10.092188159419464,
+      -9.819698771952275
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 505,
+        "band": 0.06293167755275526,
+        "mv_bias": 1.2896626700372107,
+        "mv_realized_vol_annual": 0.21653256099686327,
+        "mv_forecast_vol_annual": 0.18514315870222714,
+        "log_score": -9.237976986235942,
+        "long_only_bias": 1.2217978446751423,
+        "long_short_bias": 1.1936453674705663
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 22,
+        "band": 0.30151134457776363,
+        "mv_bias": 6.577059040783643,
+        "mv_realized_vol_annual": 0.7681358118363583,
+        "mv_forecast_vol_annual": 0.12010726312060653,
+        "log_score": -0.39832467614730793,
+        "long_only_bias": 4.734221810307652,
+        "long_short_bias": 2.973864223116489
+      },
+      "COVID crash (wide)": {
+        "n_obs": 52,
+        "band": 0.19611613513818404,
+        "mv_bias": 5.123998503851876,
+        "mv_realized_vol_annual": 0.6578218082938359,
+        "mv_forecast_vol_annual": 0.1317265003106824,
+        "log_score": -4.724057213101581,
+        "long_only_bias": 3.3744919795004353,
+        "long_short_bias": 2.2396126841405968
+      },
+      "2022 drawdown": {
+        "n_obs": 251,
+        "band": 0.08926436853549036,
+        "mv_bias": 1.338088605380209,
+        "mv_realized_vol_annual": 0.147381701418284,
+        "mv_forecast_vol_annual": 0.11269916047371781,
+        "log_score": -9.688744188760815,
+        "long_only_bias": 1.207781497353801,
+        "long_short_bias": 0.9825869502776552
+      }
+    }
+  },
+  {
+    "spec_key": "ledoit_wolf_window252",
+    "spec_label": "Ledoit-Wolf (1y window)",
+    "short_label": "Ledoit-Wolf",
+    "asset_set": "size_bm_25",
+    "horizon": "1w",
+    "n_obs": 1345,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.0355994994910591,
+        "median": 1.0356011606778877,
+        "p05": 1.022966973016179,
+        "p95": 1.0480139511380215,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.7313454404945904,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.0209906978185714,
+        "median": 1.013946492263658,
+        "p05": 0.8901158031837061,
+        "p95": 1.168122967283757,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.6859219474497682,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.13460526473090179,
+      "forecast_vol_annual": 0.10067699090654063,
+      "gross_leverage": 4.183121394709317,
+      "bias": {
+        "n_obs": 1345,
+        "n_portfolios": 1,
+        "mean": 1.3401909357965314,
+        "median": 1.3401909357965314,
+        "p05": 1.3401909357965314,
+        "p95": 1.3401909357965314,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.43585780525502316,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -8.340200168423271,
+    "log_score_ci": [
+      -8.601803202406899,
+      -8.128547205598975
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 101,
+        "band": 0.14071950894605836,
+        "mv_bias": 1.2208562507243377,
+        "mv_realized_vol_annual": 0.19129605357962454,
+        "mv_forecast_vol_annual": 0.18496709850318932,
+        "log_score": -7.667446849587136,
+        "long_only_bias": 1.1707114003416037,
+        "long_short_bias": 1.1042285325106553
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 5,
+        "band": 0.6324555320336759,
+        "mv_bias": 5.8715930435354,
+        "mv_realized_vol_annual": 0.7915073000923952,
+        "mv_forecast_vol_annual": 0.11251872501401222,
+        "log_score": 2.528663354834364,
+        "long_only_bias": 4.749377383008089,
+        "long_short_bias": 3.2658231627447725
+      },
+      "COVID crash (wide)": {
+        "n_obs": 10,
+        "band": 0.4472135954999579,
+        "mv_bias": 4.362758866549841,
+        "mv_realized_vol_annual": 0.5741198695746907,
+        "mv_forecast_vol_annual": 0.1303060173650589,
+        "log_score": -2.211935381394737,
+        "long_only_bias": 3.503402633653308,
+        "long_short_bias": 2.4920568181687703
+      },
+      "2022 drawdown": {
+        "n_obs": 51,
+        "band": 0.19802950859533486,
+        "mv_bias": 1.4262893028701156,
+        "mv_realized_vol_annual": 0.16123986691512437,
+        "mv_forecast_vol_annual": 0.11254097517650814,
+        "log_score": -8.119973895021092,
+        "long_only_bias": 1.0793278462465343,
+        "long_short_bias": 0.9275609078623831
+      }
+    }
+  },
+  {
+    "spec_key": "ledoit_wolf_window252",
+    "spec_label": "Ledoit-Wolf (1y window)",
+    "short_label": "Ledoit-Wolf",
+    "asset_set": "size_bm_25",
+    "horizon": "1m",
+    "n_obs": 336,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.1167618190831428,
+        "median": 1.1165374171478541,
+        "p05": 1.0951974798801443,
+        "p95": 1.1391145090417458,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.6385105263157895,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.0468164828228796,
+        "median": 1.0412832652939539,
+        "p05": 0.8747135013154171,
+        "p95": 1.2250174496405106,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.767961403508772,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.151301069706675,
+      "forecast_vol_annual": 0.10057525170759495,
+      "gross_leverage": 4.183121394709317,
+      "bias": {
+        "n_obs": 336,
+        "n_portfolios": 1,
+        "mean": 1.6359421321180871,
+        "median": 1.6359421321180871,
+        "p05": 1.6359421321180871,
+        "p95": 1.6359421321180871,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.24912280701754386,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -6.885307440839798,
+    "log_score_ci": [
+      -7.3368461337351345,
+      -6.660599369270646
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 25,
+        "band": 0.282842712474619,
+        "mv_bias": 1.8077369499724951,
+        "mv_realized_vol_annual": 0.25180346395056014,
+        "mv_forecast_vol_annual": 0.18454893292106897,
+        "log_score": -6.154627263015098,
+        "long_only_bias": 1.3739971251068324,
+        "long_short_bias": 1.1115912120949412
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 1,
+        "band": 1.4142135623730951,
+        "mv_bias": 13.660405444416146,
+        "mv_realized_vol_annual": NaN,
+        "mv_forecast_vol_annual": 0.08281082448312202,
+        "log_score": 13.790645336954885,
+        "long_only_bias": 10.619826340507743,
+        "long_short_bias": 3.9564372307417264
+      },
+      "COVID crash (wide)": {
+        "n_obs": 3,
+        "band": 0.816496580927726,
+        "mv_bias": 8.585948885386248,
+        "mv_realized_vol_annual": 0.9944920476490937,
+        "mv_forecast_vol_annual": 0.10378796217679277,
+        "log_score": 0.9268584717701027,
+        "long_only_bias": 6.290124919871058,
+        "long_short_bias": 2.5567365300554776
+      },
+      "2022 drawdown": {
+        "n_obs": 13,
+        "band": 0.3922322702763681,
+        "mv_bias": 1.3258991325279246,
+        "mv_realized_vol_annual": 0.15957818303393806,
+        "mv_forecast_vol_annual": 0.11139353170547889,
+        "log_score": -6.753716486027512,
+        "long_only_bias": 0.9078511343109175,
+        "long_short_bias": 1.0135322136353075
+      }
+    }
+  },
+  {
+    "spec_key": "pca_n_factors5_window252",
+    "spec_label": "PCA factor (k=5, 1y)",
+    "short_label": "PCA factor",
+    "asset_set": "size_bm_25",
+    "horizon": "1d",
+    "n_obs": 6722,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 6722,
+        "n_portfolios": 2000,
+        "mean": 1.0663719605289161,
+        "median": 1.0662523228999068,
+        "p05": 1.0636230876101125,
+        "p95": 1.069763675842486,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.46441725378503973,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 6722,
+        "n_portfolios": 2000,
+        "mean": 1.0568731309331338,
+        "median": 1.0539960496997218,
+        "p05": 1.0270108106046538,
+        "p95": 1.098180664470145,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.5925416729126068,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.13496395367252453,
+      "forecast_vol_annual": 0.0853257499642447,
+      "gross_leverage": 5.772283101621281,
+      "bias": {
+        "n_obs": 6722,
+        "n_portfolios": 1,
+        "mean": 1.5393546451113276,
+        "median": 1.5393546451113276,
+        "p05": 1.5393546451113276,
+        "p95": 1.5393546451113276,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.2720731524509069,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -9.926821543445616,
+    "log_score_ci": [
+      -10.079978488665596,
+      -9.779206000539226
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 505,
+        "band": 0.06293167755275526,
+        "mv_bias": 1.7169927518030574,
+        "mv_realized_vol_annual": 0.2285922827650764,
+        "mv_forecast_vol_annual": 0.14923807124672436,
+        "log_score": -9.042035932924103,
+        "long_only_bias": 1.2216743012393905,
+        "long_short_bias": 1.2415507027583719
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 22,
+        "band": 0.30151134457776363,
+        "mv_bias": 7.3775094896092845,
+        "mv_realized_vol_annual": 0.7118807239834246,
+        "mv_forecast_vol_annual": 0.10020021130915764,
+        "log_score": 1.028318167816669,
+        "long_only_bias": 4.730660582939581,
+        "long_short_bias": 3.1104476832833905
+      },
+      "COVID crash (wide)": {
+        "n_obs": 52,
+        "band": 0.19611613513818404,
+        "mv_bias": 5.206318987315073,
+        "mv_realized_vol_annual": 0.5082026708300205,
+        "mv_forecast_vol_annual": 0.11380224209762452,
+        "log_score": -4.21920454634484,
+        "long_only_bias": 3.3719106112201134,
+        "long_short_bias": 2.3505367785506865
+      },
+      "2022 drawdown": {
+        "n_obs": 251,
+        "band": 0.08926436853549036,
+        "mv_bias": 1.5954441291485366,
+        "mv_realized_vol_annual": 0.14840036936280024,
+        "mv_forecast_vol_annual": 0.09531425517833457,
+        "log_score": -9.532000698866636,
+        "long_only_bias": 1.2069971502572598,
+        "long_short_bias": 1.0122599169191577
+      }
+    }
+  },
+  {
+    "spec_key": "pca_n_factors5_window252",
+    "spec_label": "PCA factor (k=5, 1y)",
+    "short_label": "PCA factor",
+    "asset_set": "size_bm_25",
+    "horizon": "1w",
+    "n_obs": 1345,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.034341887103835,
+        "median": 1.0340506717763303,
+        "p05": 1.0228586851235912,
+        "p95": 1.0466140546585336,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.7315297527047914,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.06271205693806,
+        "median": 1.0635909700450115,
+        "p05": 1.0070036319275673,
+        "p95": 1.1200879869341707,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.7013848531684699,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.1351205832730017,
+      "forecast_vol_annual": 0.0853136816222565,
+      "gross_leverage": 5.772283101621281,
+      "bias": {
+        "n_obs": 1345,
+        "n_portfolios": 1,
+        "mean": 1.6273079157319628,
+        "median": 1.6273079157319628,
+        "p05": 1.6273079157319628,
+        "p95": 1.6273079157319628,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.17156105100463678,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -8.315048400374266,
+    "log_score_ci": [
+      -8.591786714584597,
+      -8.100718330859026
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 101,
+        "band": 0.14071950894605836,
+        "mv_bias": 1.7410570248764976,
+        "mv_realized_vol_annual": 0.2224291437019533,
+        "mv_forecast_vol_annual": 0.14898967733140345,
+        "log_score": -7.409454053429005,
+        "long_only_bias": 1.1705782968946628,
+        "long_short_bias": 1.153477487818492
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 5,
+        "band": 0.6324555320336759,
+        "mv_bias": 6.654201206324779,
+        "mv_realized_vol_annual": 0.6324818413047072,
+        "mv_forecast_vol_annual": 0.09208441308725299,
+        "log_score": 3.0273999982757482,
+        "long_only_bias": 4.745610632199247,
+        "long_short_bias": 3.366504610467459
+      },
+      "COVID crash (wide)": {
+        "n_obs": 10,
+        "band": 0.4472135954999579,
+        "mv_bias": 4.818150947413281,
+        "mv_realized_vol_annual": 0.48074627506010287,
+        "mv_forecast_vol_annual": 0.11197505562846424,
+        "log_score": -2.084920102242229,
+        "long_only_bias": 3.500629316141344,
+        "long_short_bias": 2.5795227430918257
+      },
+      "2022 drawdown": {
+        "n_obs": 51,
+        "band": 0.19802950859533486,
+        "mv_bias": 1.5791269307057358,
+        "mv_realized_vol_annual": 0.15485716522975998,
+        "mv_forecast_vol_annual": 0.09518151313849671,
+        "log_score": -8.019230477292492,
+        "long_only_bias": 1.0786476906634077,
+        "long_short_bias": 0.9557849381880759
+      }
+    }
+  },
+  {
+    "spec_key": "pca_n_factors5_window252",
+    "spec_label": "PCA factor (k=5, 1y)",
+    "short_label": "PCA factor",
+    "asset_set": "size_bm_25",
+    "horizon": "1m",
+    "n_obs": 336,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.115424072820594,
+        "median": 1.1149814465000651,
+        "p05": 1.0935864188239661,
+        "p95": 1.1380827344289248,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.6379122807017544,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.0908951497676045,
+        "median": 1.0891833932559447,
+        "p05": 0.9705551289176819,
+        "p95": 1.2163091980187277,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.7887298245614035,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.16154569735020816,
+      "forecast_vol_annual": 0.08531329836867137,
+      "gross_leverage": 5.772283101621281,
+      "bias": {
+        "n_obs": 336,
+        "n_portfolios": 1,
+        "mean": 2.0515483229404667,
+        "median": 2.0515483229404667,
+        "p05": 2.0515483229404667,
+        "p95": 2.0515483229404667,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.0,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -6.803770145519733,
+    "log_score_ci": [
+      -7.282712744535121,
+      -6.557354642461441
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 25,
+        "band": 0.282842712474619,
+        "mv_bias": 2.6615323548032874,
+        "mv_realized_vol_annual": 0.30279101152713495,
+        "mv_forecast_vol_annual": 0.14828162426817906,
+        "log_score": -5.791831297746458,
+        "long_only_bias": 1.3734833005413576,
+        "long_short_bias": 1.1615206315225601
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 1,
+        "band": 1.4142135623730951,
+        "mv_bias": 14.971986158914426,
+        "mv_realized_vol_annual": NaN,
+        "mv_forecast_vol_annual": 0.06116794708213411,
+        "log_score": 24.306410070374433,
+        "long_only_bias": 10.607578256947273,
+        "long_short_bias": 4.08741144527692
+      },
+      "COVID crash (wide)": {
+        "n_obs": 3,
+        "band": 0.816496580927726,
+        "mv_bias": 9.245859527714101,
+        "mv_realized_vol_annual": 0.8306365583726193,
+        "mv_forecast_vol_annual": 0.08725653993899168,
+        "log_score": 4.506197498759141,
+        "long_only_bias": 6.2830972976037955,
+        "long_short_bias": 2.6667360621336473
+      },
+      "2022 drawdown": {
+        "n_obs": 13,
+        "band": 0.3922322702763681,
+        "mv_bias": 1.7712770315808792,
+        "mv_realized_vol_annual": 0.18311881575467026,
+        "mv_forecast_vol_annual": 0.09400705673814624,
+        "log_score": -6.623512181566785,
+        "long_only_bias": 0.9072370250246466,
+        "long_short_bias": 1.0409654351405857
+      }
+    }
+  },
+  {
+    "spec_key": "fundamental_factor_halflife63.0_window252",
+    "spec_label": "FF5+Mom factor (1y, factor HL 63d)",
+    "short_label": "FF5+Mom factor",
+    "asset_set": "size_bm_25",
+    "horizon": "1d",
+    "n_obs": 6722,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 6722,
+        "n_portfolios": 2000,
+        "mean": 1.0264179781434333,
+        "median": 1.026299328681834,
+        "p05": 1.024648728433231,
+        "p95": 1.0285372624223676,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.5634494828361565,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 6722,
+        "n_portfolios": 2000,
+        "mean": 1.0211995852580102,
+        "median": 1.0142353527359331,
+        "p05": 0.9561759125376948,
+        "p95": 1.1127325967640365,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.6348343576675162,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.13307599663949868,
+      "forecast_vol_annual": 0.09210349000734636,
+      "gross_leverage": 5.103752635505711,
+      "bias": {
+        "n_obs": 6722,
+        "n_portfolios": 1,
+        "mean": 1.4019373821732846,
+        "median": 1.4019373821732846,
+        "p05": 1.4019373821732846,
+        "p95": 1.4019373821732846,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.3755059211512517,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -9.945255877946677,
+    "log_score_ci": [
+      -10.085900875306349,
+      -9.815609775763496
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 505,
+        "band": 0.06293167755275526,
+        "mv_bias": 1.4364582008406659,
+        "mv_realized_vol_annual": 0.211758129632508,
+        "mv_forecast_vol_annual": 0.162324307965408,
+        "log_score": -9.223125730009803,
+        "long_only_bias": 1.101448951382416,
+        "long_short_bias": 1.1388967348823926
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 22,
+        "band": 0.30151134457776363,
+        "mv_bias": 6.465136790171675,
+        "mv_realized_vol_annual": 0.7668201210408404,
+        "mv_forecast_vol_annual": 0.12240483930244923,
+        "log_score": -1.0042064268019688,
+        "long_only_bias": 3.7952928968476702,
+        "long_short_bias": 2.851867240826932
+      },
+      "COVID crash (wide)": {
+        "n_obs": 52,
+        "band": 0.19611613513818404,
+        "mv_bias": 4.590668775861123,
+        "mv_realized_vol_annual": 0.5515749005319264,
+        "mv_forecast_vol_annual": 0.1373949478171737,
+        "log_score": -5.178478435067327,
+        "long_only_bias": 2.7417941012585465,
+        "long_short_bias": 2.125351710696388
+      },
+      "2022 drawdown": {
+        "n_obs": 251,
+        "band": 0.08926436853549036,
+        "mv_bias": 1.5639200358748837,
+        "mv_realized_vol_annual": 0.155886912184938,
+        "mv_forecast_vol_annual": 0.10077978167438192,
+        "log_score": -9.55756008268279,
+        "long_only_bias": 1.1140964677071494,
+        "long_short_bias": 0.9775981178846805
+      }
+    }
+  },
+  {
+    "spec_key": "fundamental_factor_halflife63.0_window252",
+    "spec_label": "FF5+Mom factor (1y, factor HL 63d)",
+    "short_label": "FF5+Mom factor",
+    "asset_set": "size_bm_25",
+    "horizon": "1w",
+    "n_obs": 1345,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.0078857685758351,
+        "median": 1.0078379531194903,
+        "p05": 0.9957625158378282,
+        "p95": 1.0202058832764533,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.8067534775888717,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 1.030488063450926,
+        "median": 1.0258580763435858,
+        "p05": 0.9453631869441071,
+        "p95": 1.134522346451553,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.7339308346213292,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.13237648871389185,
+      "forecast_vol_annual": 0.09209040600444773,
+      "gross_leverage": 5.103752635505711,
+      "bias": {
+        "n_obs": 1345,
+        "n_portfolios": 1,
+        "mean": 1.4954217522468713,
+        "median": 1.4954217522468713,
+        "p05": 1.4954217522468713,
+        "p95": 1.4954217522468713,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.23183925811437403,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -8.32195835234167,
+    "log_score_ci": [
+      -8.584209910473696,
+      -8.123012325549494
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 101,
+        "band": 0.14071950894605836,
+        "mv_bias": 1.4575453742650297,
+        "mv_realized_vol_annual": 0.19941092654860768,
+        "mv_forecast_vol_annual": 0.16203436390560694,
+        "log_score": -7.570460450525275,
+        "long_only_bias": 1.047220142960316,
+        "long_short_bias": 1.0642605672990562
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 5,
+        "band": 0.6324555320336759,
+        "mv_bias": 6.527655237780417,
+        "mv_realized_vol_annual": 0.618762213714843,
+        "mv_forecast_vol_annual": 0.11227200805701103,
+        "log_score": 1.1281164918465876,
+        "long_only_bias": 4.0074221823552545,
+        "long_short_bias": 3.1486855812356818
+      },
+      "COVID crash (wide)": {
+        "n_obs": 10,
+        "band": 0.4472135954999579,
+        "mv_bias": 4.705588167895856,
+        "mv_realized_vol_annual": 0.5049383822249647,
+        "mv_forecast_vol_annual": 0.13533164469503584,
+        "log_score": -3.12955572405061,
+        "long_only_bias": 2.951771223352494,
+        "long_short_bias": 2.3906548175604363
+      },
+      "2022 drawdown": {
+        "n_obs": 51,
+        "band": 0.19802950859533486,
+        "mv_bias": 1.5268763358922117,
+        "mv_realized_vol_annual": 0.15722126073936857,
+        "mv_forecast_vol_annual": 0.10087734861277561,
+        "log_score": -8.019590655057128,
+        "long_only_bias": 0.9919094870911818,
+        "long_short_bias": 0.9300023832829883
+      }
+    }
+  },
+  {
+    "spec_key": "fundamental_factor_halflife63.0_window252",
+    "spec_label": "FF5+Mom factor (1y, factor HL 63d)",
+    "short_label": "FF5+Mom factor",
+    "asset_set": "size_bm_25",
+    "horizon": "1m",
+    "n_obs": 336,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.1101692921972812,
+        "median": 1.1095096458470235,
+        "p05": 1.0871262049988177,
+        "p95": 1.1341417407074867,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.6746315789473685,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.0639295740205745,
+        "median": 1.0586793828428824,
+        "p05": 0.9171302760184309,
+        "p95": 1.2212079799203455,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.7850894736842106,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.15067831788462183,
+      "forecast_vol_annual": 0.0919808759578134,
+      "gross_leverage": 5.103752635505711,
+      "bias": {
+        "n_obs": 336,
+        "n_portfolios": 1,
+        "mean": 1.848559072565171,
+        "median": 1.848559072565171,
+        "p05": 1.848559072565171,
+        "p95": 1.848559072565171,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.07017543859649122,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -6.826603032368163,
+    "log_score_ci": [
+      -7.302461841311868,
+      -6.602057492344986
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 25,
+        "band": 0.282842712474619,
+        "mv_bias": 2.188778270398529,
+        "mv_realized_vol_annual": 0.2541033529138847,
+        "mv_forecast_vol_annual": 0.16065676506705234,
+        "log_score": -5.980479560753201,
+        "long_only_bias": 1.308182093363445,
+        "long_short_bias": 1.0882052706182166
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 1,
+        "band": 1.4142135623730951,
+        "mv_bias": 13.655239043557293,
+        "mv_realized_vol_annual": NaN,
+        "mv_forecast_vol_annual": 0.07229650944869376,
+        "log_score": 19.152152751930558,
+        "long_only_bias": 10.721558603771827,
+        "long_short_bias": 4.093900700894177
+      },
+      "COVID crash (wide)": {
+        "n_obs": 3,
+        "band": 0.816496580927726,
+        "mv_bias": 8.08680809865718,
+        "mv_realized_vol_annual": 0.7375300219626101,
+        "mv_forecast_vol_annual": 0.10440006912927158,
+        "log_score": 2.629343654270025,
+        "long_only_bias": 6.2700488885666985,
+        "long_short_bias": 2.623718987431638
+      },
+      "2022 drawdown": {
+        "n_obs": 13,
+        "band": 0.3922322702763681,
+        "mv_bias": 1.4558361131402069,
+        "mv_realized_vol_annual": 0.15565307179412258,
+        "mv_forecast_vol_annual": 0.1007976902983678,
+        "log_score": -6.6664366026651045,
+        "long_only_bias": 0.8287733947531215,
+        "long_short_bias": 1.0086314127780533
+      }
+    }
+  },
+  {
+    "spec_key": "vra[ewma_halflife252.0]_halflife504.0",
+    "spec_label": "EWMA (half-life 252d) + regime adj. (HL 504d)",
+    "short_label": "EWMA + VRA",
+    "asset_set": "size_bm_25",
+    "horizon": "1d",
+    "n_obs": 6722,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 6722,
+        "n_portfolios": 2000,
+        "mean": 0.9897572668872864,
+        "median": 0.9897675603006718,
+        "p05": 0.9863153799181167,
+        "p95": 0.9931574090990927,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.3441500524658972,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 6722,
+        "n_portfolios": 2000,
+        "mean": 0.981339598735351,
+        "median": 0.9816740763738021,
+        "p05": 0.9668995628087237,
+        "p95": 0.9947913922813437,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.45446282416429323,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.12802827904245695,
+      "forecast_vol_annual": 0.11865341036899392,
+      "gross_leverage": 5.401406202682411,
+      "bias": {
+        "n_obs": 6722,
+        "n_portfolios": 1,
+        "mean": 1.0772981118125198,
+        "median": 1.0772981118125198,
+        "p05": 1.0772981118125198,
+        "p95": 1.0772981118125198,
+        "band": 0.017249072348272235,
+        "share_in_band": 0.5059211512516864,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -9.990242433746602,
+    "log_score_ci": [
+      -10.119191336920762,
+      -9.875340981511467
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 505,
+        "band": 0.06293167755275526,
+        "mv_bias": 1.3350540915201377,
+        "mv_realized_vol_annual": 0.20403783984280102,
+        "mv_forecast_vol_annual": 0.17046661434810362,
+        "log_score": -9.278652919191996,
+        "long_only_bias": 1.2566165774458704,
+        "long_short_bias": 1.219698060249809
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 22,
+        "band": 0.30151134457776363,
+        "mv_bias": 5.179505751760153,
+        "mv_realized_vol_annual": 0.7096844437280553,
+        "mv_forecast_vol_annual": 0.1445799330689354,
+        "log_score": -2.9431370510415458,
+        "long_only_bias": 4.621909932424349,
+        "long_short_bias": 2.7981895834605623
+      },
+      "COVID crash (wide)": {
+        "n_obs": 52,
+        "band": 0.19611613513818404,
+        "mv_bias": 3.56371319601248,
+        "mv_realized_vol_annual": 0.4848374596291743,
+        "mv_forecast_vol_annual": 0.1615622598982196,
+        "log_score": -6.329793411572471,
+        "long_only_bias": 3.277801547107764,
+        "long_short_bias": 2.0994275522217283
+      },
+      "2022 drawdown": {
+        "n_obs": 251,
+        "band": 0.08926436853549036,
+        "mv_bias": 0.98329416374013,
+        "mv_realized_vol_annual": 0.16413305053677213,
+        "mv_forecast_vol_annual": 0.16698966035855528,
+        "log_score": -9.639177633945463,
+        "long_only_bias": 0.9440972533298113,
+        "long_short_bias": 0.868440461140201
+      }
+    }
+  },
+  {
+    "spec_key": "vra[ewma_halflife252.0]_halflife504.0",
+    "spec_label": "EWMA (half-life 252d) + regime adj. (HL 504d)",
+    "short_label": "EWMA + VRA",
+    "asset_set": "size_bm_25",
+    "horizon": "1w",
+    "n_obs": 1345,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 0.962717460594017,
+        "median": 0.9628242012043761,
+        "p05": 0.9480596648972148,
+        "p95": 0.9777719893275804,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.528104714064915,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 1345,
+        "n_portfolios": 2000,
+        "mean": 0.9886180423950505,
+        "median": 0.9866483159331478,
+        "p05": 0.9376450041190079,
+        "p95": 1.046424336670375,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.4892697063369397,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.12716285881568556,
+      "forecast_vol_annual": 0.1186370808841558,
+      "gross_leverage": 5.401406202682411,
+      "bias": {
+        "n_obs": 1345,
+        "n_portfolios": 1,
+        "mean": 1.1278448251265878,
+        "median": 1.1278448251265878,
+        "p05": 1.1278448251265878,
+        "p95": 1.1278448251265878,
+        "band": 0.03856149436398495,
+        "share_in_band": 0.4559505409582689,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -8.390362328717993,
+    "log_score_ci": [
+      -8.628380811448757,
+      -8.22177687447455
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 101,
+        "band": 0.14071950894605836,
+        "mv_bias": 1.2767107843989023,
+        "mv_realized_vol_annual": 0.184875757717048,
+        "mv_forecast_vol_annual": 0.1698692458448224,
+        "log_score": -7.713408497209376,
+        "long_only_bias": 1.2029849325500899,
+        "long_short_bias": 1.1242903170613294
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 5,
+        "band": 0.6324555320336759,
+        "mv_bias": 4.995539430925206,
+        "mv_realized_vol_annual": 0.5965976217165672,
+        "mv_forecast_vol_annual": 0.13413345915399374,
+        "log_score": -1.0063193391068286,
+        "long_only_bias": 4.6702610682082515,
+        "long_short_bias": 3.1079183028755435
+      },
+      "COVID crash (wide)": {
+        "n_obs": 10,
+        "band": 0.4472135954999579,
+        "mv_bias": 3.581229757781982,
+        "mv_realized_vol_annual": 0.45301854567372485,
+        "mv_forecast_vol_annual": 0.15960172292697442,
+        "log_score": -4.202147197853892,
+        "long_only_bias": 3.4306067395396203,
+        "long_short_bias": 2.3652042759042913
+      },
+      "2022 drawdown": {
+        "n_obs": 51,
+        "band": 0.19802950859533486,
+        "mv_bias": 1.0717140862606762,
+        "mv_realized_vol_annual": 0.18080527043664915,
+        "mv_forecast_vol_annual": 0.16697611832735493,
+        "log_score": -8.061193073554673,
+        "long_only_bias": 0.8395842990405386,
+        "long_short_bias": 0.8256239383518247
+      }
+    }
+  },
+  {
+    "spec_key": "vra[ewma_halflife252.0]_halflife504.0",
+    "spec_label": "EWMA (half-life 252d) + regime adj. (HL 504d)",
+    "short_label": "EWMA + VRA",
+    "asset_set": "size_bm_25",
+    "horizon": "1m",
+    "n_obs": 336,
+    "n_assets": 25,
+    "bias": {
+      "long_only": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.0599945533884283,
+        "median": 1.0598349333363726,
+        "p05": 1.0355898773498196,
+        "p95": 1.08583110637219,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.3888017543859649,
+        "rolling_window": 52
+      },
+      "long_short": {
+        "n_obs": 336,
+        "n_portfolios": 2000,
+        "mean": 1.0228237120782417,
+        "median": 1.0200726524458308,
+        "p05": 0.9009203518154315,
+        "p95": 1.1531856304572126,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.620459649122807,
+        "rolling_window": 52
+      }
+    },
+    "min_variance": {
+      "realized_vol_annual": 0.14642184297046248,
+      "forecast_vol_annual": 0.11857774973850475,
+      "gross_leverage": 5.401406202682411,
+      "bias": {
+        "n_obs": 336,
+        "n_portfolios": 1,
+        "mean": 1.390274814959942,
+        "median": 1.390274814959942,
+        "p05": 1.390274814959942,
+        "p95": 1.390274814959942,
+        "band": 0.07715167498104596,
+        "share_in_band": 0.35789473684210527,
+        "rolling_window": 52
+      }
+    },
+    "log_score_mean": -6.935747760446353,
+    "log_score_ci": [
+      -7.390256594857058,
+      -6.729945043433256
+    ],
+    "stress": {
+      "GFC 2008-2009": {
+        "n_obs": 25,
+        "band": 0.282842712474619,
+        "mv_bias": 1.9034499305377302,
+        "mv_realized_vol_annual": 0.24829056651643575,
+        "mv_forecast_vol_annual": 0.16769648256525163,
+        "log_score": -6.236697563906132,
+        "long_only_bias": 1.4503628544599565,
+        "long_short_bias": 1.1365539466733308
+      },
+      "COVID crash (Mar 2020)": {
+        "n_obs": 1,
+        "band": 1.4142135623730951,
+        "mv_bias": 12.365285528829983,
+        "mv_realized_vol_annual": NaN,
+        "mv_forecast_vol_annual": 0.0944751838528539,
+        "log_score": 17.582039794422418,
+        "long_only_bias": 10.59459492575396,
+        "long_short_bias": 4.134180703339791
+      },
+      "COVID crash (wide)": {
+        "n_obs": 3,
+        "band": 0.816496580927726,
+        "mv_bias": 7.293852052966634,
+        "mv_realized_vol_annual": 0.8033273938185386,
+        "mv_forecast_vol_annual": 0.12688167551730303,
+        "log_score": 1.712393455320334,
+        "long_only_bias": 6.248381182675893,
+        "long_short_bias": 2.6413472373551947
+      },
+      "2022 drawdown": {
+        "n_obs": 13,
+        "band": 0.3922322702763681,
+        "mv_bias": 0.9046020523247111,
+        "mv_realized_vol_annual": 0.15747736841068402,
+        "mv_forecast_vol_annual": 0.16685934570249464,
+        "log_score": -6.706331104182661,
+        "long_only_bias": 0.6939294334500399,
+        "long_short_bias": 0.9035045643847954
+      }
+    }
+  }
+]

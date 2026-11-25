@@ -1,0 +1,182 @@
+{
+  "riskcheck_version": "0.1.0",
+  "run_utc": "2026-11-25T17:11:10+00:00",
+  "wall_seconds": 30.71,
+  "per_spec_seconds": {
+    "industry49/sample_window756": 8.361,
+    "industry49/ewma_halflife252.0": 2.656,
+    "industry49/ledoit_wolf_window252": 2.573,
+    "industry49/pca_n_factors5_window252": 2.371,
+    "industry49/fundamental_factor_halflife63.0_window252": 2.443,
+    "industry49/vra[ewma_halflife252.0]_halflife504.0": 2.323,
+    "size_bm_25/sample_window756": 4.2,
+    "size_bm_25/ewma_halflife252.0": 1.159,
+    "size_bm_25/ledoit_wolf_window252": 1.1,
+    "size_bm_25/pca_n_factors5_window252": 1.004,
+    "size_bm_25/fundamental_factor_halflife63.0_window252": 1.149,
+    "size_bm_25/vra[ewma_halflife252.0]_halflife504.0": 1.072
+  },
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "processor": "arm",
+  "python": "3.11.15",
+  "jax": "0.10.2",
+  "jax_backend": "cpu",
+  "jax_devices": [
+    "cpu:0"
+  ],
+  "float64": true,
+  "test_span": {
+    "start": "2000-01-01",
+    "horizons": {
+      "1d": {
+        "days": 1,
+        "rebalance_stride": 1
+      },
+      "1w": {
+        "days": 5,
+        "rebalance_stride": 1
+      },
+      "1m": {
+        "days": 20,
+        "rebalance_stride": 4
+      }
+    }
+  },
+  "rebalance_stride_days": 5,
+  "burn_in_days": 756,
+  "n_random_portfolios": 2000,
+  "portfolio_seed": 20260101,
+  "rolling_bias_window": 52,
+  "bootstrap": {
+    "draws": 2000,
+    "block": 52,
+    "seed": 7
+  },
+  "panels": {
+    "industry49": {
+      "label": "49 industry portfolios",
+      "n_assets": 49,
+      "n_dates": 14434,
+      "first_date": "1969-07-01",
+      "last_date": "2026-09-30",
+      "dropped_series": [],
+      "n_dropped_dates": 1,
+      "dropped_dates": [
+        "1971-03-11"
+      ]
+    },
+    "size_bm_25": {
+      "label": "25 size / book-to-market portfolios",
+      "n_assets": 25,
+      "n_dates": 14435,
+      "first_date": "1969-07-01",
+      "last_date": "2026-09-30",
+      "dropped_series": [],
+      "n_dropped_dates": 0,
+      "dropped_dates": []
+    }
+  },
+  "specs": [
+    {
+      "family": "sample",
+      "params": {
+        "window": 756
+      },
+      "label": "Sample (3y window)"
+    },
+    {
+      "family": "ewma",
+      "params": {
+        "halflife": 252.0
+      },
+      "label": "EWMA (half-life 252d)"
+    },
+    {
+      "family": "ledoit_wolf",
+      "params": {
+        "window": 252
+      },
+      "label": "Ledoit-Wolf (1y window)"
+    },
+    {
+      "family": "pca",
+      "params": {
+        "window": 252,
+        "n_factors": 5
+      },
+      "label": "PCA factor (k=5, 1y)"
+    },
+    {
+      "family": "fundamental",
+      "params": {
+        "window": 252,
+        "factor_halflife": 63.0
+      },
+      "label": "FF5+Mom factor (1y, factor HL 63d)"
+    },
+    {
+      "family": "vra",
+      "params": {
+        "halflife": 504.0
+      },
+      "base": {
+        "family": "ewma",
+        "params": {
+          "halflife": 252.0
+        }
+      },
+      "label": "EWMA (half-life 252d) + regime adj. (HL 504d)"
+    }
+  ],
+  "data_manifest": {
+    "files": {
+      "ff5": {
+        "bytes": 150489,
+        "csv_name": "F-F_Research_Data_5_Factors_2x3_daily.csv",
+        "description": "Fama-French 5 research factors plus the risk-free rate, daily",
+        "downloaded_utc": "2026-11-25T17:10:05+00:00",
+        "sha256": "e58577223032aa45071a46686f7068900c371b516c9eb04e28e974c34264f84f",
+        "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_5_Factors_2x3_daily_CSV.zip",
+        "zip_name": "F-F_Research_Data_5_Factors_2x3_daily_CSV.zip"
+      },
+      "industry49": {
+        "bytes": 4177116,
+        "csv_name": "49_Industry_Portfolios_Daily.csv",
+        "description": "49 industry portfolios, daily, value- and equal-weighted",
+        "downloaded_utc": "2026-11-25T17:10:04+00:00",
+        "sha256": "b9d36d571e968d71f7b03207e7fed6398554f953719b8c1bf3ee3ad8d00e7520",
+        "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/49_Industry_Portfolios_daily_CSV.zip",
+        "zip_name": "49_Industry_Portfolios_daily_CSV.zip"
+      },
+      "momentum": {
+        "bytes": 85338,
+        "csv_name": "F-F_Momentum_Factor_daily.csv",
+        "description": "Momentum factor, daily",
+        "downloaded_utc": "2026-11-25T17:10:05+00:00",
+        "sha256": "e56d5bc845544e2993e77353b12c611cfce3149ef754f9b59fc67904ddadd369",
+        "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Momentum_Factor_daily_CSV.zip",
+        "zip_name": "F-F_Momentum_Factor_daily_CSV.zip"
+      },
+      "size_bm_100": {
+        "bytes": 15805142,
+        "csv_name": "100_Portfolios_10x10_Daily.csv",
+        "description": "100 portfolios formed on size and book-to-market, daily",
+        "downloaded_utc": "2026-11-25T17:10:05+00:00",
+        "sha256": "8fad24e04196408125ac739f7a065c4c799d7094f53cc48f9ee34df5405a0775",
+        "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/100_Portfolios_10x10_Daily_CSV.zip",
+        "zip_name": "100_Portfolios_10x10_Daily_CSV.zip"
+      },
+      "size_bm_25": {
+        "bytes": 4043238,
+        "csv_name": "25_Portfolios_5x5_Daily.csv",
+        "description": "25 portfolios formed on size and book-to-market, daily",
+        "downloaded_utc": "2026-11-25T17:10:04+00:00",
+        "sha256": "820936bd308756c3f66afbb211c9a2a929fed5f8fcf6253fc8a1dfbe2f7c7276",
+        "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/25_Portfolios_5x5_Daily_CSV.zip",
+        "zip_name": "25_Portfolios_5x5_Daily_CSV.zip"
+      }
+    },
+    "library_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+    "source": "Kenneth R. French Data Library, Tuck School of Business at Dartmouth"
+  }
+}

@@ -1,0 +1,749 @@
+{
+  "criterion": "mean Gaussian log score per asset (lower is better), 1w horizon, averaged over asset sets",
+  "criterion_horizon": "1w",
+  "validation_span": {
+    "first_observation": "1972-07-03",
+    "last_observation": "1999-12-29",
+    "n_observations": {
+      "industry49": 1390,
+      "size_bm_25": 1390
+    }
+  },
+  "test_span_start": "2000-01-01",
+  "grids": {
+    "sample": [
+      {
+        "spec": {
+          "family": "sample",
+          "params": {
+            "window": 756
+          }
+        },
+        "label": "Sample (3y window)",
+        "log_score_by_asset_set": {
+          "industry49": -7.0753655972184575,
+          "size_bm_25": -8.646617166650481
+        },
+        "criterion": -7.860991381934469
+      },
+      {
+        "spec": {
+          "family": "sample",
+          "params": {
+            "window": 252
+          }
+        },
+        "label": "Sample (1y window)",
+        "log_score_by_asset_set": {
+          "industry49": -7.012070972775012,
+          "size_bm_25": -8.668164830949259
+        },
+        "criterion": -7.840117901862135
+      }
+    ],
+    "ewma": [
+      {
+        "spec": {
+          "family": "ewma",
+          "params": {
+            "halflife": 252.0
+          }
+        },
+        "label": "EWMA (half-life 252d)",
+        "log_score_by_asset_set": {
+          "industry49": -7.138018251093464,
+          "size_bm_25": -8.715160249681519
+        },
+        "criterion": -7.926589250387492
+      },
+      {
+        "spec": {
+          "family": "ewma",
+          "params": {
+            "halflife": 126.0
+          }
+        },
+        "label": "EWMA (half-life 126d)",
+        "log_score_by_asset_set": {
+          "industry49": -7.113240978800099,
+          "size_bm_25": -8.718653797546711
+        },
+        "criterion": -7.9159473881734055
+      },
+      {
+        "spec": {
+          "family": "ewma",
+          "params": {
+            "halflife": 504.0
+          }
+        },
+        "label": "EWMA (half-life 504d)",
+        "log_score_by_asset_set": {
+          "industry49": -7.121449926762345,
+          "size_bm_25": -8.699621111728487
+        },
+        "criterion": -7.910535519245416
+      },
+      {
+        "spec": {
+          "family": "ewma",
+          "params": {
+            "halflife": 63.0
+          }
+        },
+        "label": "EWMA (half-life 63d)",
+        "log_score_by_asset_set": {
+          "industry49": -6.989157956384298,
+          "size_bm_25": -8.68266116451985
+        },
+        "criterion": -7.835909560452073
+      },
+      {
+        "spec": {
+          "family": "ewma",
+          "params": {
+            "halflife": 42.0
+          }
+        },
+        "label": "EWMA (half-life 42d)",
+        "log_score_by_asset_set": {
+          "industry49": -6.804214759335858,
+          "size_bm_25": -8.620499615378385
+        },
+        "criterion": -7.712357187357122
+      },
+      {
+        "spec": {
+          "family": "ewma",
+          "params": {
+            "halflife": 21.0
+          }
+        },
+        "label": "EWMA (half-life 21d)",
+        "log_score_by_asset_set": {
+          "industry49": -5.82646214216641,
+          "size_bm_25": -8.33920383103264
+        },
+        "criterion": -7.0828329865995245
+      },
+      {
+        "spec": {
+          "family": "ewma",
+          "params": {
+            "halflife": 11.0
+          }
+        },
+        "label": "EWMA (half-life 11d)",
+        "log_score_by_asset_set": {
+          "industry49": -0.7591782737871399,
+          "size_bm_25": -7.414897331193777
+        },
+        "criterion": -4.087037802490459
+      }
+    ],
+    "ledoit_wolf": [
+      {
+        "spec": {
+          "family": "ledoit_wolf",
+          "params": {
+            "window": 252
+          }
+        },
+        "label": "Ledoit-Wolf (1y window)",
+        "log_score_by_asset_set": {
+          "industry49": -7.085821246307194,
+          "size_bm_25": -8.604276504298424
+        },
+        "criterion": -7.845048875302809
+      },
+      {
+        "spec": {
+          "family": "ledoit_wolf",
+          "params": {
+            "window": 756
+          }
+        },
+        "label": "Ledoit-Wolf (3y window)",
+        "log_score_by_asset_set": {
+          "industry49": -7.089826586196278,
+          "size_bm_25": -8.57510725660294
+        },
+        "criterion": -7.832466921399609
+      }
+    ],
+    "pca": [
+      {
+        "spec": {
+          "family": "pca",
+          "params": {
+            "window": 252,
+            "n_factors": 5
+          }
+        },
+        "label": "PCA factor (k=5, 1y)",
+        "log_score_by_asset_set": {
+          "industry49": -7.048553097076409,
+          "size_bm_25": -8.598493039230476
+        },
+        "criterion": -7.823523068153443
+      },
+      {
+        "spec": {
+          "family": "pca",
+          "params": {
+            "window": 252,
+            "n_factors": 3
+          }
+        },
+        "label": "PCA factor (k=3, 1y)",
+        "log_score_by_asset_set": {
+          "industry49": -7.0372379457467,
+          "size_bm_25": -8.572380054705514
+        },
+        "criterion": -7.804809000226107
+      },
+      {
+        "spec": {
+          "family": "pca",
+          "params": {
+            "window": 252,
+            "n_factors": 8
+          }
+        },
+        "label": "PCA factor (k=8, 1y)",
+        "log_score_by_asset_set": {
+          "industry49": -7.032582433718172,
+          "size_bm_25": -8.558172001956752
+        },
+        "criterion": -7.795377217837462
+      },
+      {
+        "spec": {
+          "family": "pca",
+          "params": {
+            "window": 756,
+            "n_factors": 8
+          }
+        },
+        "label": "PCA factor (k=8, 3y)",
+        "log_score_by_asset_set": {
+          "industry49": -7.011005268314162,
+          "size_bm_25": -8.548990272622206
+        },
+        "criterion": -7.779997770468183
+      },
+      {
+        "spec": {
+          "family": "pca",
+          "params": {
+            "window": 756,
+            "n_factors": 5
+          }
+        },
+        "label": "PCA factor (k=5, 3y)",
+        "log_score_by_asset_set": {
+          "industry49": -6.999861481234199,
+          "size_bm_25": -8.553703495645077
+        },
+        "criterion": -7.776782488439638
+      },
+      {
+        "spec": {
+          "family": "pca",
+          "params": {
+            "window": 252,
+            "n_factors": 10
+          }
+        },
+        "label": "PCA factor (k=10, 1y)",
+        "log_score_by_asset_set": {
+          "industry49": -7.008438682174575,
+          "size_bm_25": -8.503533643450961
+        },
+        "criterion": -7.755986162812768
+      },
+      {
+        "spec": {
+          "family": "pca",
+          "params": {
+            "window": 756,
+            "n_factors": 10
+          }
+        },
+        "label": "PCA factor (k=10, 3y)",
+        "log_score_by_asset_set": {
+          "industry49": -6.996237610368461,
+          "size_bm_25": -8.514786633462471
+        },
+        "criterion": -7.755512121915466
+      },
+      {
+        "spec": {
+          "family": "pca",
+          "params": {
+            "window": 756,
+            "n_factors": 3
+          }
+        },
+        "label": "PCA factor (k=3, 3y)",
+        "log_score_by_asset_set": {
+          "industry49": -6.975555189067413,
+          "size_bm_25": -8.510695149014333
+        },
+        "criterion": -7.743125169040873
+      },
+      {
+        "spec": {
+          "family": "pca",
+          "params": {
+            "window": 252,
+            "n_factors": 2
+          }
+        },
+        "label": "PCA factor (k=2, 1y)",
+        "log_score_by_asset_set": {
+          "industry49": -7.022800633943053,
+          "size_bm_25": -8.454594717906282
+        },
+        "criterion": -7.7386976759246675
+      },
+      {
+        "spec": {
+          "family": "pca",
+          "params": {
+            "window": 756,
+            "n_factors": 2
+          }
+        },
+        "label": "PCA factor (k=2, 3y)",
+        "log_score_by_asset_set": {
+          "industry49": -6.956534456044603,
+          "size_bm_25": -8.372295767254185
+        },
+        "criterion": -7.664415111649394
+      },
+      {
+        "spec": {
+          "family": "pca",
+          "params": {
+            "window": 252,
+            "n_factors": 1
+          }
+        },
+        "label": "PCA factor (k=1, 1y)",
+        "log_score_by_asset_set": {
+          "industry49": -7.011516864584426,
+          "size_bm_25": -8.153357208784056
+        },
+        "criterion": -7.582437036684241
+      },
+      {
+        "spec": {
+          "family": "pca",
+          "params": {
+            "window": 756,
+            "n_factors": 1
+          }
+        },
+        "label": "PCA factor (k=1, 3y)",
+        "log_score_by_asset_set": {
+          "industry49": -6.952400976658721,
+          "size_bm_25": -8.100977142752182
+        },
+        "criterion": -7.526689059705451
+      }
+    ],
+    "fundamental": [
+      {
+        "spec": {
+          "family": "fundamental",
+          "params": {
+            "window": 252,
+            "factor_halflife": 63.0
+          }
+        },
+        "label": "FF5+Mom factor (1y, factor HL 63d)",
+        "log_score_by_asset_set": {
+          "industry49": -7.112891666508342,
+          "size_bm_25": -8.621718623354079
+        },
+        "criterion": -7.86730514493121
+      },
+      {
+        "spec": {
+          "family": "fundamental",
+          "params": {
+            "window": 252,
+            "factor_halflife": 42.0
+          }
+        },
+        "label": "FF5+Mom factor (1y, factor HL 42d)",
+        "log_score_by_asset_set": {
+          "industry49": -7.111546883173254,
+          "size_bm_25": -8.621935264742183
+        },
+        "criterion": -7.866741073957718
+      },
+      {
+        "spec": {
+          "family": "fundamental",
+          "params": {
+            "window": 252,
+            "factor_halflife": 126.0
+          }
+        },
+        "label": "FF5+Mom factor (1y, factor HL 126d)",
+        "log_score_by_asset_set": {
+          "industry49": -7.1121412871552385,
+          "size_bm_25": -8.618229882036442
+        },
+        "criterion": -7.8651855845958405
+      },
+      {
+        "spec": {
+          "family": "fundamental",
+          "params": {
+            "window": 252,
+            "factor_halflife": 21.0
+          }
+        },
+        "label": "FF5+Mom factor (1y, factor HL 21d)",
+        "log_score_by_asset_set": {
+          "industry49": -7.106547747103793,
+          "size_bm_25": -8.618378619821659
+        },
+        "criterion": -7.862463183462726
+      },
+      {
+        "spec": {
+          "family": "fundamental",
+          "params": {
+            "window": 252,
+            "factor_halflife": 252.0
+          }
+        },
+        "label": "FF5+Mom factor (1y, factor HL 252d)",
+        "log_score_by_asset_set": {
+          "industry49": -7.109398316499395,
+          "size_bm_25": -8.614118083076868
+        },
+        "criterion": -7.861758199788131
+      },
+      {
+        "spec": {
+          "family": "fundamental",
+          "params": {
+            "window": 756,
+            "factor_halflife": 63.0
+          }
+        },
+        "label": "FF5+Mom factor (3y, factor HL 63d)",
+        "log_score_by_asset_set": {
+          "industry49": -7.052848494180779,
+          "size_bm_25": -8.579546853017874
+        },
+        "criterion": -7.816197673599326
+      },
+      {
+        "spec": {
+          "family": "fundamental",
+          "params": {
+            "window": 756,
+            "factor_halflife": 42.0
+          }
+        },
+        "label": "FF5+Mom factor (3y, factor HL 42d)",
+        "log_score_by_asset_set": {
+          "industry49": -7.0498378509070925,
+          "size_bm_25": -8.58022295871122
+        },
+        "criterion": -7.815030404809156
+      },
+      {
+        "spec": {
+          "family": "fundamental",
+          "params": {
+            "window": 756,
+            "factor_halflife": 126.0
+          }
+        },
+        "label": "FF5+Mom factor (3y, factor HL 126d)",
+        "log_score_by_asset_set": {
+          "industry49": -7.05427353271431,
+          "size_bm_25": -8.57384745674587
+        },
+        "criterion": -7.81406049473009
+      },
+      {
+        "spec": {
+          "family": "fundamental",
+          "params": {
+            "window": 756,
+            "factor_halflife": 252.0
+          }
+        },
+        "label": "FF5+Mom factor (3y, factor HL 252d)",
+        "log_score_by_asset_set": {
+          "industry49": -7.053591833675143,
+          "size_bm_25": -8.566966426952963
+        },
+        "criterion": -7.810279130314052
+      },
+      {
+        "spec": {
+          "family": "fundamental",
+          "params": {
+            "window": 756,
+            "factor_halflife": 21.0
+          }
+        },
+        "label": "FF5+Mom factor (3y, factor HL 21d)",
+        "log_score_by_asset_set": {
+          "industry49": -7.042431004515138,
+          "size_bm_25": -8.577128918715745
+        },
+        "criterion": -7.809779961615442
+      }
+    ]
+  },
+  "vra_base": {
+    "family": "ewma",
+    "params": {
+      "halflife": 252.0
+    }
+  },
+  "vra_grid": [
+    {
+      "spec": {
+        "family": "vra",
+        "params": {
+          "halflife": 504.0
+        },
+        "base": {
+          "family": "ewma",
+          "params": {
+            "halflife": 252.0
+          }
+        }
+      },
+      "label": "EWMA (half-life 252d) + regime adj. (HL 504d)",
+      "log_score_by_asset_set": {
+        "industry49": -7.148704917115621,
+        "size_bm_25": -8.709270597984373
+      },
+      "criterion": -7.928987757549997
+    },
+    {
+      "spec": {
+        "family": "vra",
+        "params": {
+          "halflife": 1008.0
+        },
+        "base": {
+          "family": "ewma",
+          "params": {
+            "halflife": 252.0
+          }
+        }
+      },
+      "label": "EWMA (half-life 252d) + regime adj. (HL 1008d)",
+      "log_score_by_asset_set": {
+        "industry49": -7.145909456946051,
+        "size_bm_25": -8.709859344800284
+      },
+      "criterion": -7.927884400873168
+    },
+    {
+      "spec": {
+        "family": "vra",
+        "params": {
+          "halflife": 252.0
+        },
+        "base": {
+          "family": "ewma",
+          "params": {
+            "halflife": 252.0
+          }
+        }
+      },
+      "label": "EWMA (half-life 252d) + regime adj. (HL 252d)",
+      "log_score_by_asset_set": {
+        "industry49": -7.1505860634612555,
+        "size_bm_25": -8.703344017028018
+      },
+      "criterion": -7.926965040244637
+    },
+    {
+      "spec": {
+        "family": "vra",
+        "params": {
+          "halflife": 126.0
+        },
+        "base": {
+          "family": "ewma",
+          "params": {
+            "halflife": 252.0
+          }
+        }
+      },
+      "label": "EWMA (half-life 252d) + regime adj. (HL 126d)",
+      "log_score_by_asset_set": {
+        "industry49": -7.147819672969723,
+        "size_bm_25": -8.69102796705554
+      },
+      "criterion": -7.919423820012631
+    },
+    {
+      "spec": {
+        "family": "vra",
+        "params": {
+          "halflife": 63.0
+        },
+        "base": {
+          "family": "ewma",
+          "params": {
+            "halflife": 252.0
+          }
+        }
+      },
+      "label": "EWMA (half-life 252d) + regime adj. (HL 63d)",
+      "log_score_by_asset_set": {
+        "industry49": -7.1387213528853986,
+        "size_bm_25": -8.669728701026646
+      },
+      "criterion": -7.904225026956022
+    },
+    {
+      "spec": {
+        "family": "vra",
+        "params": {
+          "halflife": 42.0
+        },
+        "base": {
+          "family": "ewma",
+          "params": {
+            "halflife": 252.0
+          }
+        }
+      },
+      "label": "EWMA (half-life 252d) + regime adj. (HL 42d)",
+      "log_score_by_asset_set": {
+        "industry49": -7.131544911933733,
+        "size_bm_25": -8.651776341887867
+      },
+      "criterion": -7.8916606269108005
+    },
+    {
+      "spec": {
+        "family": "vra",
+        "params": {
+          "halflife": 21.0
+        },
+        "base": {
+          "family": "ewma",
+          "params": {
+            "halflife": 252.0
+          }
+        }
+      },
+      "label": "EWMA (half-life 252d) + regime adj. (HL 21d)",
+      "log_score_by_asset_set": {
+        "industry49": -7.119039002630797,
+        "size_bm_25": -8.621247760084705
+      },
+      "criterion": -7.870143381357751
+    }
+  ],
+  "chosen": {
+    "sample": {
+      "family": "sample",
+      "params": {
+        "window": 756
+      }
+    },
+    "ewma": {
+      "family": "ewma",
+      "params": {
+        "halflife": 252.0
+      }
+    },
+    "ledoit_wolf": {
+      "family": "ledoit_wolf",
+      "params": {
+        "window": 252
+      }
+    },
+    "pca": {
+      "family": "pca",
+      "params": {
+        "window": 252,
+        "n_factors": 5
+      }
+    },
+    "fundamental": {
+      "family": "fundamental",
+      "params": {
+        "window": 252,
+        "factor_halflife": 63.0
+      }
+    }
+  },
+  "chosen_vra": {
+    "family": "vra",
+    "params": {
+      "halflife": 504.0
+    },
+    "base": {
+      "family": "ewma",
+      "params": {
+        "halflife": 252.0
+      }
+    }
+  },
+  "final_specs": [
+    {
+      "family": "sample",
+      "params": {
+        "window": 756
+      }
+    },
+    {
+      "family": "ewma",
+      "params": {
+        "halflife": 252.0
+      }
+    },
+    {
+      "family": "ledoit_wolf",
+      "params": {
+        "window": 252
+      }
+    },
+    {
+      "family": "pca",
+      "params": {
+        "window": 252,
+        "n_factors": 5
+      }
+    },
+    {
+      "family": "fundamental",
+      "params": {
+        "window": 252,
+        "factor_halflife": 63.0
+      }
+    },
+    {
+      "family": "vra",
+      "params": {
+        "halflife": 504.0
+      },
+      "base": {
+        "family": "ewma",
+        "params": {
+          "halflife": 252.0
+        }
+      }
+    }
+  ]
+}
