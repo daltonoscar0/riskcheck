@@ -108,4 +108,4 @@
 | fundamental | FF5+Mom factor (1y, factor HL 63d) | 10 configurations | -7.8673 |
 | vra | EWMA (half-life 252d) + regime adj. (HL 504d) | 7 configurations | -7.9290 |
 
-_Run 2026-11-25T17:47:43+00:00 on arm, JAX 0.10.2 (cpu), float64=True; evaluation wall time 95.96s._
+_Run 2026-11-25T18:19:18+00:00 on arm, JAX 0.10.2 (cpu), float64=True; evaluation wall time 31.09s._

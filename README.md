@@ -324,17 +324,28 @@ six estimators over 2,736 rebalance dates, the quadratic forms for both random p
 minimum-variance solves, and the log scores at all three horizons. Compilation is excluded by a
 warm-up pass.
 
-| Assets | Random portfolios per set | CPU best (s) | First pass incl. compile (s) |
-| --: | --: | --: | --: |
-| 49 | 2,000 | 14.3 | 19.0 |
-| 49 | 8,000 | 61.3 | 57.0 |
-| 95 | 2,000 | 35.7 | 36.8 |
-| 95 | 8,000 | _see results/bench.json_ | |
-| 95 | 20,000 | _see results/bench.json_ | |
+| Assets | Random portfolios per set | CPU best (s) |
+| --: | --: | --: |
+| 49 | 2,000 | 14.3 |
+| 49 | 8,000 | 61.3 |
+| 95 | 2,000 | 35.7 |
+| 95 | 8,000 | 115.0 |
+| 95 | 20,000 | 344.0 |
 
 The complete pipeline — both asset sets, six estimators, three horizons, all tables, the block
-bootstraps and both figures — takes about 31 s, and the 40-configuration validation sweep about
-21 s. Efficiency was a design constraint rather than an afterthought: the walk-forward is a
+bootstraps and both figures — takes **31 s**, and the 40-configuration validation sweep **22 s**.
+So the whole study reruns from built panels in under a minute, which is what made it practical to
+widen the hyperparameter grids until every winner was interior rather than settling for the first
+grid that ran.
+
+Two caveats on these timings, since a laptop is not a benchmarking rig. An early measurement of
+the 95-asset, 8,000-portfolio case read 176 s because it shared the machine with a test run, and
+was discarded. The 20,000-portfolio case came out at 290 s, 295 s and 344 s on three otherwise
+idle runs — a ±9% spread, presumably thermal. Treat the large-N rows as indicative of scaling
+rather than precise. Every record ever taken, superseded ones included, is in
+`results/bench.json`.
+
+Efficiency was a design constraint rather than an afterthought: the walk-forward is a
 chunked `vmap` over rebalance dates rather than a Python loop over 2,736 dates, the exponentially
 weighted estimators are a `lax.scan` over 5-day blocks that never materialises a `T×N×N` array, and
 the PCA sweep shares one batched `eigh` across all six values of _k_ instead of recomputing it

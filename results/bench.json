@@ -110,5 +110,61 @@
     "repeats": 1,
     "best_seconds": 176.44,
     "mean_seconds": 176.44
+  },
+  {
+    "riskcheck_version": "0.1.0",
+    "asset_set": "size_bm_100",
+    "n_assets": 95,
+    "n_dates": 14435,
+    "n_rebalance_dates": 2736,
+    "n_test_observations": {
+      "1d": 6722,
+      "1w": 1345,
+      "1m": 336
+    },
+    "n_estimators": 6,
+    "n_portfolios_per_set": 8000,
+    "n_portfolio_sets": 2,
+    "backend": "cpu",
+    "devices": [
+      "cpu:0"
+    ],
+    "float64": true,
+    "platform": "macOS-26.3.1-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.11.15",
+    "jax": "0.10.2",
+    "first_pass_with_compile_seconds": 127.093,
+    "repeats": 2,
+    "best_seconds": 115.035,
+    "mean_seconds": 117.028
+  },
+  {
+    "riskcheck_version": "0.1.0",
+    "asset_set": "size_bm_100",
+    "n_assets": 95,
+    "n_dates": 14435,
+    "n_rebalance_dates": 2736,
+    "n_test_observations": {
+      "1d": 6722,
+      "1w": 1345,
+      "1m": 336
+    },
+    "n_estimators": 6,
+    "n_portfolios_per_set": 20000,
+    "n_portfolio_sets": 2,
+    "backend": "cpu",
+    "devices": [
+      "cpu:0"
+    ],
+    "float64": true,
+    "platform": "macOS-26.3.1-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.11.15",
+    "jax": "0.10.2",
+    "first_pass_with_compile_seconds": 334.803,
+    "repeats": 1,
+    "best_seconds": 344.036,
+    "mean_seconds": 344.036
   }
 ]

@@ -277,6 +277,41 @@ def test_factor_models_give_the_highest_realised_minimum_variance_volatility(met
     assert set(worst) == {"PCA factor", "FF5+Mom factor"}
 
 
+def test_benchmark_table_matches_saved_timings(readme_tables):
+    """The compute table must quote timings that were actually recorded.
+
+    ``results/bench.json`` appends a record per run, so a configuration that
+    was measured twice has two entries. The README quotes the most recent
+    measurement for each configuration, which is the one taken on an idle
+    machine; the superseded records stay in the file rather than being
+    deleted.
+    """
+    import json
+
+    path = RESULTS / "bench.json"
+    if not path.exists():
+        pytest.skip("results/bench.json not present; run `riskcheck bench`")
+
+    latest: dict[tuple[int, int], dict] = {}
+    for record in json.loads(path.read_text()):
+        latest[(record["n_assets"], record["n_portfolios_per_set"])] = record
+
+    rows = None
+    for headers, candidate in readme_tables:
+        if headers[0] == "Assets":
+            rows = candidate
+            break
+    assert rows is not None, "no benchmark table in the README"
+
+    for row in rows:
+        assets = int(row[0].replace(",", ""))
+        portfolios = int(row[1].replace(",", ""))
+        claimed = _number(row[2])
+        record = latest.get((assets, portfolios))
+        assert record is not None, f"no saved timing for N={assets}, P={portfolios}"
+        assert claimed == pytest.approx(record["best_seconds"], abs=0.05), (assets, portfolios)
+
+
 def test_frozen_hyperparameters_in_the_readme_match_the_saved_choice():
     """The estimator table must name what `riskcheck validate` actually froze."""
     import json
