@@ -9,6 +9,7 @@ output of the one before it:
     riskcheck evaluate   # score the test span once, write results/
     riskcheck report     # print the headline tables as Markdown
     riskcheck bench      # time the walk-forward
+    riskcheck spans      # print what was used to select vs to score
 """
 
 from __future__ import annotations
@@ -174,6 +175,57 @@ def bench(
         existing = json.loads(out.read_text()) if out.exists() else []
         existing.append(record)
         out.write_text(json.dumps(existing, indent=2) + "\n")
+
+
+@app.command()
+def spans(
+    root: Path = typer.Option(None, help="Project root; defaults to the current directory."),
+) -> None:
+    """Print what the hyperparameters were chosen on, and what was scored.
+
+    Recomputed from the panels rather than read back from a file, so it is a
+    check on the code path and not a repeat of what that path once wrote. A
+    selection observation and a scored observation are compared by the last day
+    of their realised return window, which is the date at which the return
+    became known: comparing start dates would let a one-month window opened in
+    December 1999 close inside the test span and still look clean.
+    """
+    paths = _paths(root)
+    panels = _load_panels(paths, config.MAIN_ASSET_SETS)
+
+    typer.echo(f"criterion horizon: {validate.CRITERION_HORIZON}")
+    typer.echo(f"EWMA half-life grid: {list(validate.EWMA_HALFLIVES)}")
+    if paths.hyperparameters.exists():
+        blob = json.loads(paths.hyperparameters.read_text())
+        typer.echo(f"EWMA half-life chosen: {blob['chosen']['ewma']['params']['halflife']}")
+    typer.echo("")
+
+    worst_selection: str | None = None
+    first_scored: str | None = None
+    for key in config.MAIN_ASSET_SETS:
+        panel = panels[key]
+        for label, span in (("selection", "validation"), ("evaluation", "test")):
+            for horizon in config.HORIZONS:
+                obs = runner.panel_context(panel, horizon, span).observations
+                first, last = str(obs.end_date[0]), str(obs.end_date[-1])
+                typer.echo(
+                    f"{key:12s} {label:10s} {horizon:3s}  "
+                    f"{first} .. {last}  ({len(obs)} observations)"
+                )
+                if span == "validation":
+                    worst_selection = max(worst_selection or last, last)
+                else:
+                    first_scored = min(first_scored or first, first)
+
+    typer.echo("")
+    typer.echo(f"last realised return used to select : {worst_selection}")
+    typer.echo(f"first realised return ever scored   : {first_scored}")
+    if worst_selection is not None and first_scored is not None:
+        if worst_selection < first_scored:
+            typer.echo("No overlap: selection is strictly before evaluation.")
+        else:
+            typer.echo("OVERLAP: a scored return was also used to choose hyperparameters.")
+            raise typer.Exit(code=1)
 
 
 def main() -> None:

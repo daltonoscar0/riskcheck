@@ -82,6 +82,13 @@ to 2026-09-30. `riskcheck fetch` records a SHA-256 for each file in `data/raw/ma
 `riskcheck evaluate` copies that manifest into `results/run_metadata.json`, because French rebuilds
 these files monthly and revises history when CRSP does.
 
+**None of this data is redistributed here.** `data/raw/` and `data/processed/` are gitignored, so
+the repository carries no French file and no panel derived from one — only the checksums that say
+which vintage was used. `riskcheck fetch` downloads your own copy from Dartmouth, and the test suite
+never needs it: every test runs against a synthetic panel generated in `tests/conftest.py`, with an
+autouse fixture that makes any network call inside the suite an error. If your checksums differ from
+the manifest, French has revised the files since; the numbers below are the stated vintage's.
+
 ### Why portfolio data and not stock prices
 
 The usual free source of equity history is a price API that only knows about companies that still
@@ -153,6 +160,27 @@ half-life. Eleven days is roughly 16 effective observations for a 49×49 matrix,
 singular. Every grid here was widened until its winner was interior, so no frozen choice is an
 artefact of where the grid happened to stop; all 40 configurations and their scores are in
 `results/hyperparameters.json`.
+
+**The selection window.** Every number in that table was chosen on realised returns ending between
+**1972-07-03 and 1999-12-31**; the first return the test span scores realised on **2000-01-03**. The
+two sets are disjoint, with no shared observation at any of the three horizons. What makes that true
+rather than approximately true is that an observation is assigned to a span by the *last day of its
+realised return window* — the day the return became known — and not by the date its forecast was
+made: the one-month horizon is twenty trading days wide, so filtering on the forecast date would
+have let windows opened in December 1999 close inside the test span. `riskcheck spans` recomputes
+both ranges from the panels and prints them, and `tests/test_sample_split.py` pins the rule,
+including an assertion that such straddling windows exist — so the distinction is being tested, not
+merely stated.
+
+```
+$ riskcheck spans
+industry49   selection  1w   1972-07-03 .. 1999-12-29  (1390 observations)
+industry49   evaluation 1w   2000-01-05 .. 2026-09-25  (1345 observations)
+...
+last realised return used to select : 1999-12-31
+first realised return ever scored   : 2000-01-03
+No overlap: selection is strictly before evaluation.
+```
 
 ## Evaluation
 
@@ -351,15 +379,33 @@ weighted estimators are a `lax.scan` over 5-day blocks that never materialises a
 the PCA sweep shares one batched `eigh` across all six values of _k_ instead of recomputing it
 (1.0 s for six _k_ values against 8.4 s for one, naively).
 
-`notebooks/colab_gpu_benchmark.ipynb` installs this package from the repo on a free Colab T4 and
-runs the identical command, in both float64 and float32, across the same problem sizes. Two things
-are worth predicting before reading those numbers: consumer NVIDIA cards run float64 at 1/32 of
-float32 throughput, and at N=49 this workload is a long sequence of small matrix operations —
-a latency problem, which is what a GPU is worst at. The notebook scales N and the portfolio count
-up specifically to find where that stops being true.
+### GPU
 
-> **Not yet run.** The GPU column is deliberately absent rather than estimated. Run the notebook and
-> paste the table it prints.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/daltonoscar0/riskcheck/blob/main/notebooks/colab_gpu_benchmark.ipynb)
+
+[`notebooks/colab_gpu_benchmark.ipynb`](notebooks/colab_gpu_benchmark.ipynb) installs this package
+from the repo on a free Colab T4 and runs the identical command, in both float64 and float32,
+across the same problem sizes. Two things are worth predicting before reading those numbers:
+consumer NVIDIA cards run float64 at 1/32 of float32 throughput, and at N=49 this workload is a
+long sequence of small matrix operations — a latency problem, which is what a GPU is worst at. The
+notebook scales N and the portfolio count up specifically to find where that stops being true.
+
+Its last cell prints a Markdown table and the exact command to file it:
+
+```
+python scripts/fill_gpu_table.py < table.md     # or paste on stdin, then Ctrl-D
+```
+
+<!-- GPU-TABLE-START -->
+> **Not yet run on a GPU.** The table below is a placeholder: the GPU figures are deliberately
+> absent rather than estimated, because the whole point of the comparison is that the answer is not
+> obvious. Run the notebook above and pipe its table into `scripts/fill_gpu_table.py`, which
+> replaces this block and refuses a table whose columns are not the ones the notebook prints.
+<!-- GPU-TABLE-END -->
+
+The CPU figures it is to be read against are the table above, taken on an Apple M-series laptop at
+float64. Only `best_seconds` is comparable between the two: the first-pass column includes XLA
+compilation, which is a one-off cost that is much larger on a GPU and says nothing about throughput.
 
 ## Limitations
 

@@ -22,7 +22,7 @@ jobs:
           pip install -e ".[dev]"
 
       - name: Lint
-        run: ruff check src tests
+        run: ruff check src tests scripts
 
       # The suite runs entirely on synthetic data and fixture files. A
       # conftest fixture blocks socket creation for the duration, so a test

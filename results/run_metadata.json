@@ -1,20 +1,20 @@
 {
   "riskcheck_version": "0.1.0",
-  "run_utc": "2026-11-25T18:19:18+00:00",
-  "wall_seconds": 31.09,
+  "run_utc": "2026-11-25T20:43:15+00:00",
+  "wall_seconds": 34.24,
   "per_spec_seconds": {
-    "industry49/sample_window756": 8.304,
-    "industry49/ewma_halflife252.0": 2.428,
-    "industry49/ledoit_wolf_window252": 2.633,
-    "industry49/pca_n_factors5_window252": 2.547,
-    "industry49/fundamental_factor_halflife63.0_window252": 2.554,
-    "industry49/vra[ewma_halflife252.0]_halflife504.0": 2.458,
-    "size_bm_25/sample_window756": 4.274,
-    "size_bm_25/ewma_halflife252.0": 1.188,
-    "size_bm_25/ledoit_wolf_window252": 1.145,
-    "size_bm_25/pca_n_factors5_window252": 1.044,
-    "size_bm_25/fundamental_factor_halflife63.0_window252": 1.158,
-    "size_bm_25/vra[ewma_halflife252.0]_halflife504.0": 1.082
+    "industry49/sample_window756": 8.89,
+    "industry49/ewma_halflife252.0": 2.905,
+    "industry49/ledoit_wolf_window252": 3.233,
+    "industry49/pca_n_factors5_window252": 2.818,
+    "industry49/fundamental_factor_halflife63.0_window252": 2.863,
+    "industry49/vra[ewma_halflife252.0]_halflife504.0": 2.5,
+    "size_bm_25/sample_window756": 4.293,
+    "size_bm_25/ewma_halflife252.0": 1.402,
+    "size_bm_25/ledoit_wolf_window252": 1.239,
+    "size_bm_25/pca_n_factors5_window252": 1.361,
+    "size_bm_25/fundamental_factor_halflife63.0_window252": 1.271,
+    "size_bm_25/vra[ewma_halflife252.0]_halflife504.0": 1.148
   },
   "platform": "macOS-26.3.1-arm64-arm-64bit",
   "processor": "arm",
@@ -27,6 +27,7 @@
   "float64": true,
   "test_span": {
     "start": "2000-01-01",
+    "selection_ended": "1999-12-31",
     "horizons": {
       "1d": {
         "days": 1,
@@ -39,6 +40,42 @@
       "1m": {
         "days": 20,
         "rebalance_stride": 4
+      }
+    },
+    "scored_windows": {
+      "industry49": {
+        "1d": {
+          "first_observation_ends": "2000-01-03",
+          "last_observation_ends": "2026-09-25",
+          "n_observations": 6723
+        },
+        "1w": {
+          "first_observation_ends": "2000-01-05",
+          "last_observation_ends": "2026-09-25",
+          "n_observations": 1345
+        },
+        "1m": {
+          "first_observation_ends": "2000-01-12",
+          "last_observation_ends": "2026-09-03",
+          "n_observations": 336
+        }
+      },
+      "size_bm_25": {
+        "1d": {
+          "first_observation_ends": "2000-01-03",
+          "last_observation_ends": "2026-09-24",
+          "n_observations": 6722
+        },
+        "1w": {
+          "first_observation_ends": "2000-01-04",
+          "last_observation_ends": "2026-09-24",
+          "n_observations": 1345
+        },
+        "1m": {
+          "first_observation_ends": "2000-01-11",
+          "last_observation_ends": "2026-09-02",
+          "n_observations": 336
+        }
       }
     }
   },

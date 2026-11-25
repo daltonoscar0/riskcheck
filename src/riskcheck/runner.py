@@ -97,11 +97,23 @@ def run_test_evaluation(
     results: list[evaluate.SpecResult] = []
     rolling_rows: list[dict] = []
     timings: dict[str, float] = {}
+    # The realised window of every scored observation, recorded so the split
+    # can be audited from results/ alone: against the validation span in
+    # hyperparameters.json, these dates are what show the two do not overlap.
+    scored_windows: dict[str, dict[str, dict]] = {}
     started = time.perf_counter()
 
     for asset_set in asset_sets:
         panel = panels[asset_set]
         contexts = {h: panel_context(panel, h, "test") for h in horizons}
+        scored_windows[asset_set] = {
+            h: {
+                "first_observation_ends": str(ctx.observations.end_date[0]),
+                "last_observation_ends": str(ctx.observations.end_date[-1]),
+                "n_observations": len(ctx.observations),
+            }
+            for h, ctx in contexts.items()
+        }
         weight_sets = portfolios.standard_portfolio_sets(panel.n_assets)
         if verbose:
             first = contexts[horizons[0]].observations
@@ -172,6 +184,9 @@ def run_test_evaluation(
         "float64": using_x64(),
         "test_span": {
             "start": str(config.TEST_START),
+            # Hyperparameters were chosen on observations ending at or before
+            # this date; nothing here may end on or before it.
+            "selection_ended": str(config.VALIDATION_END),
             "horizons": {
                 h: {
                     "days": config.HORIZONS[h]["days"],
@@ -179,6 +194,7 @@ def run_test_evaluation(
                 }
                 for h in horizons
             },
+            "scored_windows": scored_windows,
         },
         "rebalance_stride_days": config.REBALANCE_STRIDE,
         "burn_in_days": config.BURN_IN,
